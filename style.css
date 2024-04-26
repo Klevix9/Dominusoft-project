@@ -20,6 +20,7 @@ Brand colors
     }
 
     .navbar{
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -28,7 +29,6 @@ Brand colors
         background-color: black;
         opacity: 0;
         color: darkgray;
-        padding-top: 20%;
         z-index: 9998;
     }
 
@@ -171,15 +171,54 @@ Brand colors
         top: 50%;
         font-size: 6vh;
         font-family: 'Courier New', Courier, monospace; /*change later*/
-
     }
 
 
-    /*  */
+    /* Welcome Message */
+
+    .welcome-message{
+        display: inline-block;
+        width: 90%;
+        margin-top: 3vh;
+        margin-right: 5%;
+        text-align: left;
+        /* background-image: url("./Assets/carousel1.jpeg"); */
+    }
+
+    .welcome-message h1{
+        font-size: 9vw;
+    }
+
+
+    /* Gallery */
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .gallery-img {
+        flex: 0 0 calc(50% - 20px);
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 10px;
+    }
+    
+    .gallery-img:nth-child(even) {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    
+    .gallery-img:nth-child(odd) {
+        margin-right: 0;
+        margin-left: auto;
+    }
+    
+
     /********************************************************************/
 
       
-    /* Footer*/
+    /* Footer*/kn
     .footer{
         position: fixed;
         bottom: 0;
@@ -348,12 +387,50 @@ Brand colors
     .slides h3{
         color: white;
         position: absolute;
+        text-align: center;
+        left: 20%;
+        top: 50%;
         font-size: 6vh;
-        right: 20%;
-        top: 40%;
         font-family: 'Courier New', Courier, monospace; /*change later*/
-        
+    }
 
+    /* Welcome Message */
+    .welcome-message{
+        display: inline-block;
+        width: 90%;
+        margin-top: 3vh;
+        margin-right: 5%;
+        text-align: left;
+        /* background-image: url("./Assets/carousel1.jpeg"); */
+    }
+
+    .welcome-message h1{
+        font-size: 9vw;
+    }  
+
+
+    /* Gallery */
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .gallery-img {
+        flex: 0 0 calc(50% - 20px);
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 10px;
+    }
+    
+    .gallery-img:nth-child(even) {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    
+    .gallery-img:nth-child(odd) {
+        margin-right: 0;
+        margin-left: auto;
     }
 
     /********************************************************************/
@@ -384,12 +461,13 @@ Brand colors
         position: fixed;
         top: 0;
         left: 0;
+        margin: 0;
+        padding-top: auto;
         width: 20%;
         height: 100%;
         background-color: transparent;
         opacity: 1;
         color: darkgray;
-        padding-top: 20%;
         z-index: 9998;
     }
 
@@ -398,55 +476,94 @@ Brand colors
     }
 
     .Home-links a{
+        font-size: 2vh;
         margin: 0px;
         display: inline-block;
         text-decoration: none;
         color: black;
         text-align: left;
-        padding-left: 5%;
+        padding-left: 0 0 0 5%;
     }
 
     /********************************************************************/
 
-        /* Welcome Message */
-        .welcome-message{
-            display: inline-block;
-            width: 80%;
-            margin-left: 15%;
-            text-align: right;
-            /* background-image: url("./Assets/carousel1.jpeg"); */
-        }
+    /* Welcome Message */
+    .welcome-message{
+        display: inline-block;
+        width: auto;
+        padding: 0;
+        margin: 0 0 0 20%;
+        text-align: right;
+        /* background-image: url("./Assets/carousel1.jpeg"); */
+    }
 
-        .welcome-message h1{
-            font-size: 9vh;
+    .welcome-message h1{
+        font-size: 9vw;
 
-        }
+    }
 
-        /* Carousel/slideshow */
-        .slideshow-container {
-            max-width: 80%;
-            position: relative;
-            margin: 10% 0 0 20%;
-        }
-        
-        .slides {
-            display: none;
-        }
-        
-        .slides img {
-            width: 100%;
-            height: auto;
-        }
-        
-        .fade {
-            animation-name: fade;
-            animation-duration: 2s;
-        }
-        
-        @keyframes fade {
-            from {opacity: 0.4}
-            to {opacity: 1}
-        }
+    /* Carousel/slideshow */
+    .slideshow-container {
+        max-width: 80%;
+        position: relative;
+        margin-left: 20%;
+    }
+    
+    .slides {
+        display: none;
+    }
+    
+    .slides img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .fade {
+        animation-name: fade;
+        animation-duration: 2s;
+    }
+    
+    @keyframes fade {
+        from {opacity: 0.4}
+        to {opacity: 1}
+    }
+
+    .slides h3{
+        color: white;
+        position: absolute;
+        text-align: center;
+        left: 20%;
+        top: 50%;
+        font-size: 6vh;
+        font-family: 'Courier New', Courier, monospace; /*change later*/
+    }
+
+
+    /* Gallery */
+    .gallery {
+        width: 80%;
+        margin-left: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .gallery-img {
+        flex: 0 0 calc(50% - 20px);
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 10px;
+    }
+    
+    .gallery-img:nth-child(even) {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    
+    .gallery-img:nth-child(odd) {
+        margin-right: 0;
+        margin-left: auto;
+    }
     
         /********************************************************************/ 
     
