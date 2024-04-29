@@ -55,4 +55,50 @@ function showSlides() {
 
 
 //Gallery
+document.addEventListener("DOMContentLoaded", function() {
+    var galleryImages = document.querySelectorAll(".gallery-img");
 
+    galleryImages.forEach(function(image) {
+        var imgHeight = image.querySelector("img").clientHeight;
+        var imgWidth = image.querySelector("img").clientWidth;
+        var infoDisplay = image.querySelector(".info-display");
+        var infoDisplayHeight = infoDisplay.clientHeight;
+        var infoDisplayWidth = infoDisplay.clientWidth;
+        
+        infoDisplay.style.bottom = "20px";
+        infoDisplay.style.right = "-20px";
+        infoDisplay.style.margin = "10px";
+
+        if (infoDisplayHeight + 20 > imgHeight) {
+            infoDisplay.style.bottom = imgHeight - 20 + "px";
+        }
+
+        if (infoDisplayWidth + 20 > imgWidth) {
+            infoDisplay.style.right = imgWidth - 20 + "px";
+        }
+    });
+});
+
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    var isActive = this.classList.contains('active');
+
+    // Close all panels
+    for (var j = 0; j < acc.length; j++) {
+      acc[j].classList.remove('active');
+      acc[j].nextElementSibling.style.maxHeight = null;
+    }
+
+    // Open the clicked panel
+    if (!isActive) {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+  

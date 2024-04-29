@@ -192,35 +192,45 @@ Brand colors
 
     /* Gallery */
     .gallery {
-        display: flex;
-        flex-wrap: wrap;
+        margin: 20% 0 0 0;
+        display: block;
         justify-content: center;
     }
     
     .gallery-img {
-        flex: 0 0 calc(50% - 20px);
         box-sizing: border-box;
-        padding: 10px;
-        margin: 10px;
+    }
+
+    .gallery-img img{
+        width: 90vw;
+        height: auto;
+    }
+
+    .info-display {
+        top: 0;
+        display: inline-block;
+        width: 60%;
+        height: 7vh;
+        border: #000000 solid;
+        background-color: #000000;
+        color: white;
+        border-radius: 2px;
     }
     
-    .gallery-img:nth-child(even) {
-        margin-left: 0;
-        margin-right: auto;
-    }
-    
-    .gallery-img:nth-child(odd) {
-        margin-right: 0;
-        margin-left: auto;
+    .info-display a {
+        bottom: 0;
+        right: 0;
+        color: white;
+        text-decoration: none;
     }
     
 
     /********************************************************************/
 
       
-    /* Footer*/kn
+    /* Footer*/
     .footer{
-        position: fixed;
+        position: relative;
         bottom: 0;
         left: 0;
         margin: 0;
@@ -412,15 +422,21 @@ Brand colors
     /* Gallery */
     .gallery {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column; /* Change flex direction to column */
+        align-items: center; /* Center align items horizontally */
+        max-width: 100%;
     }
-    
+
     .gallery-img {
-        flex: 0 0 calc(50% - 20px);
+        flex: 0 0 100%; /* Set each image to occupy 100% width */
         box-sizing: border-box;
         padding: 10px;
-        margin: 10px;
+        margin: 10px 0; /* Add vertical margin to separate images */
+    }
+
+    .gallery-img img{
+        width: 80vw;
+        height: auto;
     }
     
     .gallery-img:nth-child(even) {
@@ -433,11 +449,29 @@ Brand colors
         margin-left: auto;
     }
 
+    .info-display {
+        top: 0;
+        display: inline-block;
+        width: 60%;
+        height: 7vh;
+        border: #000000 solid;
+        background-color: #000000;
+        color: white;
+        border-radius: 2px;
+    }
+    
+    .info-display a {
+        bottom: 0;
+        right: 0;
+        color: white;
+        text-decoration: none;
+    }
+
     /********************************************************************/
       
     /* Footer*/
     .footer{
-        position: fixed;
+        position: relative;
         bottom: 0;
         left: 0;
         margin: 0;
@@ -538,38 +572,118 @@ Brand colors
         font-family: 'Courier New', Courier, monospace; /*change later*/
     }
 
-
     /* Gallery */
     .gallery {
-        width: 80%;
-        margin-left: 20%;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        max-width: 80%;
+        margin-left: 25%;
+        margin-top: 10vh;
     }
     
     .gallery-img {
-        flex: 0 0 calc(50% - 20px);
+        position: relative;
         box-sizing: border-box;
         padding: 10px;
-        margin: 10px;
+        margin: 20% 0;
     }
     
     .gallery-img:nth-child(even) {
-        margin-left: 0;
+        margin-left: 5%;
         margin-right: auto;
     }
     
     .gallery-img:nth-child(odd) {
-        margin-right: 0;
+        margin-right: 5%;
         margin-left: auto;
     }
     
-        /********************************************************************/ 
+    .gallery-img img {
+        width: 70vw;
+        height: auto;
+    }
+
+    .gallery-img:nth-child(even) .info-display {
+        left: -20px;
+        top: -20px;
+    }
+    
+    .gallery-img:nth-child(odd) .info-display {
+        right: 20px;
+        top: 20px;
+    }
+    
+    .gallery-img h3 {
+        margin-top: -20%;
+        color: white;
+        font-size: 2vw;
+        width: 40%;
+    }
+    
+    .info-display {
+        position: absolute;
+        top: 0;
+        display: inline-block;
+        width: 60%;
+        height: 7vh;
+        border: #000000 solid;
+        background-color: #000000;
+        color: white;
+        border-radius: 2px;
+    }
+    
+    .info-display a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Accordion */
+    .accordion {
+        background-color: #eee;
+        color: #444;
+        padding: 18px;
+        width: 80%;
+        margin-left: 20%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+      
+      .active, .accordion:hover {
+        background-color: #ccc; 
+      }
+      
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s ease-out; /* Add transition effect for height */
+      }
+      
+      /* Show panel when active */
+      .active + .panel {
+        display: block;
+        max-height: 200px; /* Adjust the height as needed */
+      }
+      
+      /* Enlarge panel on hover */
+      .panel:hover {
+        max-height: 200px; /* Adjust the height as needed */
+      }
+    
+    /********************************************************************/ 
     
     /* Footer*/
     .footer{
-        position: fixed;
+        position: relative;
         bottom: 0;
         left: 0;
         margin: 0;
