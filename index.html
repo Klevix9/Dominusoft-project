@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="https://kit.fontawesome.com/bcf3e0e401.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
     </head>
 
-    <div>
+    <body>
         <!-- splash screen-->
         <div id="splashscreen">
             <h1 class="fade-in">LOGO</h1>
@@ -38,22 +39,27 @@
         </div>
 
 
-        <div class="slideshow-container">
-            <div class="slides fade">
-                <img src="Assets/carousel1.jpeg" alt="Image 1">
-                <h3>New York Masachusets</h3>
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Assets/carousel1.jpeg" class="d-block w-100" alt="carousel1">
+              </div>
+              <div class="carousel-item">
+                <img src="Assets/carousel2.jpeg" class="d-block w-100" alt="carousel2">
+              </div>
+              <div class="carousel-item">
+                <img src="Assets/carousel3.jpeg" class="d-block w-100" alt="carousel3">
+              </div>
             </div>
-        
-            <div class="slides fade">
-                <img src="Assets/carousel2.jpeg" alt="Image 2">
-                <h3>New York Masachusets</h3>
-            </div>
-        
-            <div class="slides fade">
-                <img src="Assets/carousel3.jpeg" alt="Image 3">
-                <h3>New York Masachusets</h3>
-            </div>
-        </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
 
 
         <div class="gallery">
@@ -129,34 +135,139 @@
             </div>
         </div>
 
-        <div class="about-us">
-            <h2>Accordion</h2>
-
-            <button class="accordion">Section 1</button>
-            <div class="panel">
-            <img src="Assets/stock1.jpeg" alt="image">
-            </div>
-
-            <button class="accordion">Section 2</button>
-            <div class="panel">
-            <img src="Assets/stock2.jpeg" alt="image">
-            </div>
-
-            <button class="accordion">Section 3</button>
-            <div class="panel">
-            <img src="Assets/stock1.jpeg" alt="image">
+        <div class="accordion">
+            <div class="container-slides">
+                <ul class="slides">
+                    <li class="slider active brand1">
+                        <a href="#" class="action"><span>Section title 1</span></a>
+                        <div class="slide-content">
+                            <h2>Section title 1</h2>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Sed convallis magna eget placerat consequat. 
+                            In laoreet, risus ac dictum maximus, lectus est pharetra 
+                            dolor, quis suscipit dui ligula ut odio. Nullam condimentum 
+                            velit nec ligula pulvinar rhoncus. Nunc non ex non justo 
+                            dictum interdum id in lacus. Nunc a mauris in ipsum 
+                            condimentum blandit. Orci varius natoque penatibus et 
+                            magnis dis parturient montes, nascetur ridiculus mus. 
+                            Phasellus feugiat eros nec scelerisque varius. Mauris 
+                            blandit molestie ipsum, eu vulputate velit lacinia eu. 
+                            Praesent molestie sollicitudin tincidunt. Donec interdum 
+                            felis sed lorem tincidunt, vel condimentum dolor sagittis. 
+                            Maecenas nec metus risus. Integer semper libero sit amet 
+                            tellus fringilla mattis. Donec viverra a arcu ut consectetur. 
+                            Ut sagittis quam laoreet, placerat ex a, condimentum risus.
+                            </p>
+                            <p>
+                            
+                            </p>
+                        </div>
+                    </li>
+                    <li class="slider brand2">
+                        <a href="#" class="action"><span>Section title 2</span></a>
+                        <div class="slide-content">
+                            <h2>Section title 2</h2>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Sed convallis magna eget placerat consequat. 
+                            In laoreet, risus ac dictum maximus, lectus est pharetra 
+                            dolor, quis suscipit dui ligula ut odio. Nullam condimentum 
+                            velit nec ligula pulvinar rhoncus. Nunc non ex non justo 
+                            dictum interdum id in lacus. Nunc a mauris in ipsum 
+                            condimentum blandit. Orci varius natoque penatibus et 
+                            magnis dis parturient montes, nascetur ridiculus mus. 
+                            Phasellus feugiat eros nec scelerisque varius. Mauris 
+                            blandit molestie ipsum, eu vulputate velit lacinia eu. 
+                            Praesent molestie sollicitudin tincidunt. Donec interdum 
+                            felis sed lorem tincidunt, vel condimentum dolor sagittis. 
+                            Maecenas nec metus risus. Integer semper libero sit amet 
+                            tellus fringilla mattis. Donec viverra a arcu ut consectetur. 
+                            Ut sagittis quam laoreet, placerat ex a, condimentum risus.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="slider brand3">
+                        <a href="#" class="action"><span>Section title 3</span></a>
+                        <div class="slide-content">
+                            <h2>Section title 3</h2>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Sed convallis magna eget placerat consequat. 
+                            In laoreet, risus ac dictum maximus, lectus est pharetra 
+                            dolor, quis suscipit dui ligula ut odio. Nullam condimentum 
+                            velit nec ligula pulvinar rhoncus. Nunc non ex non justo 
+                            dictum interdum id in lacus. Nunc a mauris in ipsum 
+                            condimentum blandit. Orci varius natoque penatibus et 
+                            magnis dis parturient montes, nascetur ridiculus mus. 
+                            Phasellus feugiat eros nec scelerisque varius. Mauris 
+                            blandit molestie ipsum, eu vulputate velit lacinia eu. 
+                            Praesent molestie sollicitudin tincidunt. Donec interdum 
+                            felis sed lorem tincidunt, vel condimentum dolor sagittis. 
+                            Maecenas nec metus risus. Integer semper libero sit amet 
+                            tellus fringilla mattis. Donec viverra a arcu ut consectetur. 
+                            Ut sagittis quam laoreet, placerat ex a, condimentum risus.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="slider brand4">
+                        <a href="#" class="action"><span>Section title 4</span></a>
+                        <div class="slide-content">
+                            <h2>Section title 4</h2>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Sed convallis magna eget placerat consequat. 
+                            In laoreet, risus ac dictum maximus, lectus est pharetra 
+                            dolor, quis suscipit dui ligula ut odio. Nullam condimentum 
+                            velit nec ligula pulvinar rhoncus. Nunc non ex non justo 
+                            dictum interdum id in lacus. Nunc a mauris in ipsum 
+                            condimentum blandit. Orci varius natoque penatibus et 
+                            magnis dis parturient montes, nascetur ridiculus mus. 
+                            Phasellus feugiat eros nec scelerisque varius. Mauris 
+                            blandit molestie ipsum, eu vulputate velit lacinia eu. 
+                            Praesent molestie sollicitudin tincidunt. Donec interdum 
+                            felis sed lorem tincidunt, vel condimentum dolor sagittis. 
+                            Maecenas nec metus risus. Integer semper libero sit amet 
+                            tellus fringilla mattis. Donec viverra a arcu ut consectetur. 
+                            Ut sagittis quam laoreet, placerat ex a, condimentum risus.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="slider brand5">
+                        <a href="#" class="action"><span>Section title 5</span></a>
+                        <div class="slide-content">
+                            <h2>Section title 5</h2>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Sed convallis magna eget placerat consequat. 
+                            In laoreet, risus ac dictum maximus, lectus est pharetra 
+                            dolor, quis suscipit dui ligula ut odio. Nullam condimentum 
+                            velit nec ligula pulvinar rhoncus. Nunc non ex non justo 
+                            dictum interdum id in lacus. Nunc a mauris in ipsum 
+                            condimentum blandit. Orci varius natoque penatibus et 
+                            magnis dis parturient montes, nascetur ridiculus mus. 
+                            Phasellus feugiat eros nec scelerisque varius. Mauris 
+                            blandit molestie ipsum, eu vulputate velit lacinia eu. 
+                            Praesent molestie sollicitudin tincidunt. Donec interdum 
+                            felis sed lorem tincidunt, vel condimentum dolor sagittis. 
+                            Maecenas nec metus risus. Integer semper libero sit amet 
+                            tellus fringilla mattis. Donec viverra a arcu ut consectetur. 
+                            Ut sagittis quam laoreet, placerat ex a, condimentum risus.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         
-
-
         <footer class="footer">
             <div class="footer-box">
                 footer
             </div>
         </footer>
         
-        <script type="text/javascript" src="script.js"></script>
-    </div>
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
 
 </html>

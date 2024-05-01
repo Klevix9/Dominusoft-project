@@ -493,10 +493,7 @@ Brand colors
 
     .navbar{
         position: fixed;
-        top: 0;
-        left: 0;
-        margin: 0;
-        padding-top: auto;
+        vertical-align: middle;
         width: 20%;
         height: 100%;
         background-color: transparent;
@@ -516,7 +513,6 @@ Brand colors
         text-decoration: none;
         color: black;
         text-align: left;
-        padding-left: 0 0 0 5%;
     }
 
     /********************************************************************/
@@ -533,44 +529,8 @@ Brand colors
 
     .welcome-message h1{
         font-size: 9vw;
-
     }
 
-    /* Carousel/slideshow */
-    .slideshow-container {
-        max-width: 80%;
-        position: relative;
-        margin-left: 20%;
-    }
-    
-    .slides {
-        display: none;
-    }
-    
-    .slides img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .fade {
-        animation-name: fade;
-        animation-duration: 2s;
-    }
-    
-    @keyframes fade {
-        from {opacity: 0.4}
-        to {opacity: 1}
-    }
-
-    .slides h3{
-        color: white;
-        position: absolute;
-        text-align: center;
-        left: 20%;
-        top: 50%;
-        font-size: 6vh;
-        font-family: 'Courier New', Courier, monospace; /*change later*/
-    }
 
     /* Gallery */
     .gallery {
@@ -604,15 +564,11 @@ Brand colors
         height: auto;
     }
 
-    .gallery-img:nth-child(even) .info-display {
-        left: -20px;
-        top: -20px;
+    .gallery-img .info-display {
+        right: -20px;
+        bottom: -20px;
     }
-    
-    .gallery-img:nth-child(odd) .info-display {
-        right: 20px;
-        top: 20px;
-    }
+
     
     .gallery-img h3 {
         margin-top: -20%;
@@ -623,7 +579,8 @@ Brand colors
     
     .info-display {
         position: absolute;
-        top: 0;
+        bottom: -20px;
+        right: -20px;
         display: inline-block;
         width: 60%;
         height: 7vh;
@@ -640,45 +597,86 @@ Brand colors
         color: white;
         text-decoration: none;
     }
+    
 
     /* Accordion */
     .accordion {
-        background-color: #eee;
-        color: #444;
-        padding: 18px;
-        width: 80%;
+        max-width: 80%;
+        padding: 0 20px;
         margin-left: 20%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-        transition: 0.4s;
-      }
-      
-      .active, .accordion:hover {
-        background-color: #ccc; 
-      }
-      
-      .panel {
-        padding: 0 18px;
-        display: none;
-        background-color: white;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s ease-out; /* Add transition effect for height */
-      }
-      
-      /* Show panel when active */
-      .active + .panel {
-        display: block;
-        max-height: 200px; /* Adjust the height as needed */
-      }
-      
-      /* Enlarge panel on hover */
-      .panel:hover {
-        max-height: 200px; /* Adjust the height as needed */
-      }
+    }
     
+    .slides {
+        width: 100%;
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .slider {
+        list-style-type: none;
+        height: 400px;
+        width: 5%;
+        overflow: hidden;
+    
+        -webkit-transition:all 500ms linear;
+        -moz-transition:all 500ms linear;
+        -o-transition:all 500ms linear;
+        -ms-transition:all 500ms linear;
+        transition:all 500ms linear;
+    }
+
+    .slider a.action{
+        display: block;
+        height: 100%;
+        position: relative;
+    }
+    .slider a.action span{
+        font-weight: 600;
+        color:#fff;
+        transform: rotate(270deg);
+        position: absolute;
+        top: 10%;
+        width: 140px;
+        left: -30%;
+        height: 100px;
+    }
+    .slide-content{
+        display: block;
+        width: 100%;
+        padding: 40px;
+        color:#fff;
+        
+    }
+
+    .active {
+        width:80%;
+    }
+
+    .active a.action{
+        display: none;
+    }
+
+    /* brands colors */
+    .brand1{
+        background-image: url(Assets/stock1.jpeg);
+        background-size: cover;
+        background-position-y: top;
+    }
+    .brand2{
+        background-color: #b43e8f
+    }
+    .brand3{
+        background-color: #6200b3
+    }
+    .brand4{
+        background-color: #3b0086
+    }
+    .brand5{
+        background-color: #290628
+    }
+
+      
     /********************************************************************/ 
     
     /* Footer*/
@@ -686,10 +684,10 @@ Brand colors
         position: relative;
         bottom: 0;
         left: 0;
-        margin: 0;
+        margin-left: 20%;
         padding: 0;
         background-color: white;
-        width: 100%;
+        width: 80%;
         height: auto;
     }
 

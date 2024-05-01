@@ -37,23 +37,6 @@ function toggle_nav() {
   }
 }
 
-
-//Carousel
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let slides = document.getElementsByClassName("slides");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 5000); // Change image every 2.2 seconds
-}
-
-
 //Gallery
 document.addEventListener("DOMContentLoaded", function() {
     var galleryImages = document.querySelectorAll(".gallery-img");
@@ -65,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var infoDisplayHeight = infoDisplay.clientHeight;
         var infoDisplayWidth = infoDisplay.clientWidth;
         
-        infoDisplay.style.bottom = "20px";
+        infoDisplay.style.bottom = "-20px";
         infoDisplay.style.right = "-20px";
         infoDisplay.style.margin = "10px";
 
@@ -80,25 +63,38 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-var acc = document.getElementsByClassName("accordion");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    var isActive = this.classList.contains('active');
+//Accordion
+$(document).ready(function(){
 
-    // Close all panels
-    for (var j = 0; j < acc.length; j++) {
-      acc[j].classList.remove('active');
-      acc[j].nextElementSibling.style.maxHeight = null;
-    }
+  // link action
+  $(".action").click(function(e){
+      e.preventDefault();
 
-    // Open the clicked panel
-    if (!isActive) {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
+      $(".slide").removeClass("active");
+      var slide = $(this).closest(".slide");
+      slide.addClass("active");
   });
-}
+
+});
+
+// checkWidth
+checkWidth = function(){
+  var windowsize = $(window).width();
+  if (windowsize > 480) {
+      var slideWidth = $('.active').width();
+      $('.slide-content').css({
+          "width" : slideWidth+"px"
+      });
+  }
   
+}
+
+$(window).resize(function() {
+  // onresize
+  checkWidth();
+
+  // finish resize
+  clearTimeout(window.resizedFinished);
+  window.resizedFinished = setTimeout( checkWidth , 500);
+});
