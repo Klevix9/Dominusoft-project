@@ -10,19 +10,18 @@ document.addEventListener('DOMContentLoaded', (e)=>{
     }, 0);//0 -> 2000 change later
 });
 
+// Navigation bar
 
-// Get reference to the nav button element
+//Nav button
 const nav_button = document.querySelector(".nav-button");
 nav_button.style.color = "black";
 const navbar = document.querySelector(".navbar");
 let nav_toggle = false;
 
-// Add event listener to the nav_button for click events
 nav_button.addEventListener("click", function() {
   toggle_nav();
 });
 
-// Function to toggle the navbar visibility
 function toggle_nav() {
   nav_toggle = !nav_toggle;
 
@@ -36,6 +35,27 @@ function toggle_nav() {
       nav_button.style.color = "black";
   }
 }
+
+//Displace nav bar when overlapping with footer
+document.addEventListener("DOMContentLoaded", function() {
+    const navbar = document.querySelector(".navbar");
+    const footer = document.querySelector("footer");
+
+    function checkOverlap() {
+        const navbarBottom = navbar.getBoundingClientRect().bottom;
+        const footerTop = footer.getBoundingClientRect().top;
+
+        if (navbarBottom > footerTop) {
+            const overlap = navbarBottom - footerTop;
+            navbar.style.top = `-${overlap}px`;
+        } else {
+            navbar.style.top = "0";
+        }
+    }
+
+    window.addEventListener("scroll", checkOverlap);
+});
+
 
 //Gallery
 document.addEventListener("DOMContentLoaded", function() {
