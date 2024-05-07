@@ -85,18 +85,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 //Accordion
-$(document).ready(function(){
+// $(document).ready(function(){
 
-  // link action
-  $(".action").click(function(e){
-      e.preventDefault();
+//   // link action
+//   $(".action").click(function(e){
+//       e.preventDefault();
 
-      $(".slide").removeClass("active");
-      var slide = $(this).closest(".slide");
-      slide.addClass("active");
-  });
+//       $(".slider").removeClass("active");
+//       var slide = $(this).closest(".slider");
+//       slide.addClass("active");
+//   });
 
-});
+// });
+
+function slider_change(event, element) {
+    event.preventDefault();
+
+    $(".slider").removeClass("active");
+    var slide = $(element).closest(".slider");
+    slide.addClass("active");
+}
+
 
 // checkWidth
 checkWidth = function(){

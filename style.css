@@ -1,8 +1,7 @@
-/* body{
-    
+body{
     background-image: url(Assets/background3.png);
-    background-size:auto;
-} */
+    background-size: repeat;
+}
 
 /*
 Lightblue mobile view
@@ -125,19 +124,27 @@ Brand colors
     }
 
     /* Carousel */
-    .carousel{
-        margin-bottom: 20%;
+    #carousel {
+        margin-bottom: 50%;
+        width: 130%;
+    }
+
+    .carousel-item img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.5s ease;
     }
 
     /* Gallery */
     .gallery {
-        width: 90%;
+        width: 100%;
         margin: 5px 5px 200px 5px;
         display: block;
         justify-content: center;
     }
     
     .gallery-img {
+        position: relative;
         padding-bottom: 200px;
         box-sizing: border-box;
     }
@@ -147,11 +154,24 @@ Brand colors
         height: auto;
     }
 
-    .info-display {
+    .gallery-name{
+        position: absolute;
+        color: rgb(0, 0, 0);
+        font-size: 7vw;
+        text-decoration: underline;
         top: 0;
+    }
+
+    /* animation for underline */
+    @keyframes gallery-name {
+        
+    }
+
+    .info-display {
         display: inline-block;
         width: 60%;
-        height: 7vh;
+        margin: 0;
+        height: auto;
         border: #000000 solid;
         background-color: #000000;
         color: white;
@@ -159,10 +179,16 @@ Brand colors
     }
     
     .info-display a {
-        bottom: 0;
-        right: 0;
         color: white;
         text-decoration: none;
+    }
+
+    .gallery-social-media{
+        width: 40%;
+        position: relative;
+        font-size: 5vw;
+        color: black;
+        padding: 1%;
     }
     
     /* Accordion */
@@ -224,16 +250,28 @@ Brand colors
         background-position-y: top;
     }
     .brand2{
-        background-color: #b43e8f
+        background-color: #b43e8f;
+        background-image: url(Assets/stock1.jpeg);
+        background-size: cover;
+        background-position-y: top;
     }
     .brand3{
-        background-color: #6200b3
+        background-color: #6200b3;
+        background-image: url(Assets/stock1.jpeg);
+        background-size: cover;
+        background-position-y: top;
     }
     .brand4{
-        background-color: #3b0086
+        background-color: #3b0086;
+        background-image: url(Assets/stock1.jpeg);
+        background-size: cover;
+        background-position-y: top;
     }
     .brand5{
-        background-color: #290628
+        background-color: #290628;
+        background-image: url(Assets/stock1.jpeg);
+        background-size: cover;
+        background-position-y: top;
     }
 
     /********************************************************************/
@@ -356,52 +394,72 @@ Brand colors
         font-size: 9vw;
     }
 
-    /* Gallery */
-    .gallery {
-        display: flex;
-        flex-direction: column; /* Change flex direction to column */
-        align-items: center; /* Center align items horizontally */
-        max-width: 100%;
+    /* Carousel */
+    #carousel {
+        margin-bottom: 30%;
+        width: 130%;
     }
 
+    .carousel-item img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.5s ease;
+    }
+
+    /* Gallery */
+    .gallery {
+        width: 100%;
+        margin: 5px 5px 200px 5px;
+        display: block;
+        justify-content: center;
+    }
+    
     .gallery-img {
-        flex: 0 0 100%; /* Set each image to occupy 100% width */
+        position: relative;
+        padding-bottom: 200px;
         box-sizing: border-box;
-        padding: 10px;
-        margin: 10px 0; /* Add vertical margin to separate images */
     }
 
     .gallery-img img{
-        width: 80vw;
+        width:100%;
         height: auto;
     }
 
-    .gallery-img:nth-child(even) {
-        margin-left: 0;
-        margin-right: auto;
+    .gallery-name{
+        position: absolute;
+        color: rgb(0, 0, 0);
+        font-size: 7vw;
+        text-decoration: underline;
+        top: 0;
     }
 
-    .gallery-img:nth-child(odd) {
-        margin-right: 0;
-        margin-left: auto;
+    /* animation for underline */
+    @keyframes gallery-name {
+        
     }
 
     .info-display {
-        top: 0;
         display: inline-block;
         width: 60%;
-        height: 7vh;
+        margin: 0;
+        height: auto;
         border: #000000 solid;
         background-color: #000000;
         color: white;
         border-radius: 2px;
     }
-
+    
     .info-display a {
-        bottom: 0;
-        right: 0;
         color: white;
         text-decoration: none;
+    }
+
+    .gallery-social-media{
+        width: 40%;
+        position: relative;
+        font-size: 6vw;
+        color: black;
+        padding: 10px;
     }
 
     /* Accordion */
@@ -409,14 +467,14 @@ Brand colors
         max-width: 100%;
         padding: 0 20px;
     }
-
+    
     .slides {
         width: 100%;
         display: flex;
         border-radius: 10px;
         overflow: hidden;
     }
-
+    
     .slider {
         list-style-type: none;
         height: 400px;
@@ -445,6 +503,7 @@ Brand colors
         width: 100%;
         padding: 40px;
         color:#fff;
+        
     }
 
     .active {
@@ -462,16 +521,28 @@ Brand colors
         background-position-y: top;
     }
     .brand2{
-        background-color: #b43e8f
+        background-color: #b43e8f;
+        background-image: url(Assets/stock1.jpeg);
+        background-size: cover;
+        background-position-y: top;
     }
     .brand3{
-        background-color: #6200b3
+        background-color: #6200b3;
+        background-image: url(Assets/stock1.jpeg);
+        background-size: cover;
+        background-position-y: top;
     }
     .brand4{
-        background-color: #3b0086
+        background-color: #3b0086;
+        background-image: url(Assets/stock1.jpeg);
+        background-size: cover;
+        background-position-y: top;
     }
     .brand5{
-        background-color: #290628
+        background-color: #290628;
+        background-image: url(Assets/stock1.jpeg);
+        background-size: cover;
+        background-position-y: top;
     }
 
     /* Footer */
@@ -538,6 +609,20 @@ Brand colors
         font-size: 9vw;
     }
 
+    /* Carousel */
+    #carousel {
+        margin-left: 20%;
+        width: 100%;
+        padding: 0;
+    }
+
+    .carousel-item img {
+        max-width: 100%;
+        max-height: 700px;
+        height: auto;
+        transition: transform 0.5s ease;
+    }
+
     /* Gallery */
     .gallery {
         display: flex;
@@ -555,12 +640,12 @@ Brand colors
         margin: 20% 0;
     }
 
-    .gallery-img:nth-child(even) {
+    .gallery-img:nth-child(odd) {
         margin-left: 5%;
         margin-right: auto;
     }
 
-    .gallery-img:nth-child(odd) {
+    .gallery-img:nth-child(even) {
         margin-right: 5%;
         margin-left: auto;
     }
@@ -570,35 +655,40 @@ Brand colors
         height: auto;
     }
 
-    .gallery-img .info-display {
-        right: -20px;
-        bottom: -20px;
-    }
-
-    .gallery-img h3 {
-        margin-top: -20%;
-        color: white;
-        font-size: 2vw;
-        width: 40%;
-    }
-
-    .info-display {
+    .info-display{
         position: absolute;
-        bottom: -20px;
-        right: -20px;
-        display: inline-block;
         width: 60%;
-        height: 7vh;
+        margin: 0;
+        height: auto;
+        max-height: 10%;
+        top: 70%;
         border: #000000 solid;
         background-color: #000000;
         color: white;
         border-radius: 2px;
     }
 
+    .info-display p{
+
+    }
+
+    .gallery-name h3{
+        margin-top: -20%;
+        color: black;
+        font-size: 2vw;
+        width: 40%;
+    }
+
+    .gallery-social-media{
+        display: block;
+        width: 40%;
+        position: relative;
+        font-size: 2vw;
+        color: black;
+        padding: 1%;
+    }
+    
     .info-display a {
-        position: absolute;
-        bottom: 0;
-        right: 0;
         color: white;
         text-decoration: none;
     }
@@ -658,26 +748,34 @@ Brand colors
     }
 
     /* Brand Colors */
-    .brand1 {
+    .brand1{
         background-image: url(Assets/stock1.jpeg);
         background-size: cover;
         background-position-y: top;
     }
-
-    .brand2 {
+    .brand2{
         background-color: #b43e8f;
+        background-image: url(Assets/stock1.jpeg);
+        background-size: cover;
+        background-position-y: top;
     }
-
-    .brand3 {
+    .brand3{
         background-color: #6200b3;
+        background-image: url(Assets/stock1.jpeg);
+        background-size: cover;
+        background-position-y: top;
     }
-
-    .brand4 {
+    .brand4{
         background-color: #3b0086;
+        background-image: url(Assets/stock1.jpeg);
+        background-size: cover;
+        background-position-y: top;
     }
-
-    .brand5 {
+    .brand5{
         background-color: #290628;
+        background-image: url(Assets/stock1.jpeg);
+        background-size: cover;
+        background-position-y: top;
     }
 
     /* Footer */
