@@ -1,6 +1,17 @@
+html{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* *{
+    border: 1px solid red;
+} */
+
 body{
+    max-width: 100%;
     background-image: url(Assets/background3.png);
     background-size: repeat;
+    overflow-x: hidden;
 }
 
 /*
@@ -27,7 +38,7 @@ Brand colors
     }
 
     /* Navbar */
-    .navbar{
+    .navbar {
         display: none;
         position: fixed;
         top: 0;
@@ -59,13 +70,29 @@ Brand colors
         animation-direction: normal;
     }
 
+    /* Header */
+
+    header{
+        position: fixed;
+        top: 0px;
+        display: block;
+        width: 100%;
+        height: auto;
+        background-color: white;
+        z-index: 9999;
+    }
+
+    header img{
+        width: 40%;
+    }
+
     /* Navbar Button */
     .nav-button {
         display: inline-block;
         position: fixed;
         right: 20px;
-        top: 25px;
-        z-index: 9999; /* Ensure the button is above other elements */
+        top: 7px;
+        z-index: 9999;
         border: none;
         background-color: transparent;
         padding: 0;
@@ -125,8 +152,9 @@ Brand colors
 
     /* Carousel */
     #carousel {
-        margin-bottom: 50%;
-        width: 130%;
+        margin: 0 2% 50% 13%;
+        width: 100%;
+        max-width: 100%;
     }
 
     .carousel-item img {
@@ -138,7 +166,7 @@ Brand colors
     /* Gallery */
     .gallery {
         width: 100%;
-        margin: 5px 5px 200px 5px;
+        margin: 5px;
         display: block;
         justify-content: center;
     }
@@ -147,14 +175,16 @@ Brand colors
         position: relative;
         padding-bottom: 200px;
         box-sizing: border-box;
+        width: 100%; /* Ensure gallery images fit within screen width */
+        max-width: 100%; /* Ensure gallery images don't exceed screen width */
     }
 
-    .gallery-img img{
+    .gallery-img img {
         width:100%;
         height: auto;
     }
 
-    .gallery-name{
+    .gallery-name {
         position: absolute;
         color: rgb(0, 0, 0);
         font-size: 7vw;
@@ -162,7 +192,7 @@ Brand colors
         top: 0;
     }
 
-    /* animation for underline */
+    /* Animation for underline */
     @keyframes gallery-name {
         
     }
@@ -176,6 +206,7 @@ Brand colors
         background-color: #000000;
         color: white;
         border-radius: 2px;
+        max-width: 100%; /* Ensure info display fits within screen width */
     }
     
     .info-display a {
@@ -183,7 +214,7 @@ Brand colors
         text-decoration: none;
     }
 
-    .gallery-social-media{
+    .gallery-social-media {
         width: 40%;
         position: relative;
         font-size: 5vw;
@@ -193,8 +224,9 @@ Brand colors
     
     /* Accordion */
     .accordion {
+        position: relative;
         max-width: 100%;
-        padding: 0 20px;
+        padding: 0 30px 0 0;
     }
     
     .slides {
@@ -243,6 +275,26 @@ Brand colors
         display: none;
     }
 
+    .accordion-control-prev{
+        position: absolute;
+        top: 40%;
+        left: 0;
+        margin-right: auto;
+        font-size: 5vh;
+        border: none;
+        background-color: transparent;
+    }
+
+    .accordion-control-next{
+        position: absolute;
+        top: 40%;
+        right: 0;
+        margin-left: auto;
+        font-size: 5vh;
+        border: none;
+        background-color: transparent;
+    }
+
     /* Brand Colors */
     .brand1{
         background-image: url(Assets/stock1.jpeg);
@@ -287,6 +339,106 @@ Brand colors
         width: 100%;
         height: auto;
     }
+
+    
+    /********************************************************************/
+    /* Contact page */
+
+    .contact-us{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .contact{
+        position: relative;
+        width: 90%;
+        margin: auto;
+        height: auto;
+        padding: 5% 10% 5% 10%;
+        display: block;
+        border: #000000 solid;
+        border-width: 1px;
+        border-radius: 5px;
+        color: darkgray;
+        background-color: #222;
+    }
+
+    .contact h1{
+        font-size: 6vh;
+    }
+
+    #contact-select-1{
+        position: relative;
+
+        top: 0;
+        font-size: 3vh;
+        border-style: none;
+        background-color: transparent;
+    }
+
+    #contact-select-1:hover{
+        color: white;
+    }
+
+
+    #contact-select-2{
+        position: relative;
+        font-size: 3vh;
+        border-style: none;
+        background-color: transparent;
+    }
+
+    #contact-select-2:hover{
+        color: white;
+    }
+    
+    #contact-select-3{
+        position: relative;
+        font-size: 3vh;
+        border-style: none;
+        background-color: transparent;
+    }
+
+    #contact-select-3:hover{
+        color: white;
+    }
+
+
+    .contact label{
+        margin-top: 10%;
+        font-size: 2vh;
+    }
+
+    .contact input, textarea{
+        width: 100%;
+        height: 50px;
+        background-color: transparent;
+        border-style: solid;
+        border-color: darkgray;
+        border-width: 1px;
+        margin-top: 2%;
+    }
+
+    .contact input:hover{
+        background-color: darkgray;
+        color: #222;
+    }
+
+    .contact input:focus, input:focus {
+        color: darkgray;
+    }
+
+    .contact #submit{
+        color: darkgray;
+    }
+
+    .contact #submit:hover{
+        color: #222;
+        background-color: darkgray;
+    }
 }
 
 
@@ -328,6 +480,21 @@ Brand colors
         opacity: 0;
         animation: nav-animation 1s ease-in forwards; /* Corrected animation name */
         animation-direction: normal;
+    }
+
+    /* Header */
+
+    header{
+        position: fixed;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        background-color: white;
+        z-index: 9999;
+    }
+
+    header img{
+        width: 50%;
     }
 
     /* Navbar Button */
@@ -448,6 +615,10 @@ Brand colors
         color: white;
         border-radius: 2px;
     }
+
+    .info-display p{
+        font-size: 120%;
+    }
     
     .info-display a {
         color: white;
@@ -514,6 +685,10 @@ Brand colors
         display: none;
     }
 
+    .accordion-buttons{
+        display: none;
+    }
+
     /* Brand Colors */
     .brand1{
         background-image: url(Assets/stock1.jpeg);
@@ -557,6 +732,105 @@ Brand colors
         height: auto;
     }
 
+    
+    /********************************************************************/
+    /* Contact page */
+
+    .contact-us{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .contact{
+        position: relative;
+        width: 90%;
+        margin: auto;
+        height: auto;
+        padding: 5% 10% 5% 10%;
+        display: block;
+        border: #000000 solid;
+        border-width: 1px;
+        border-radius: 5px;
+        color: darkgray;
+        background-color: #222;
+    }
+
+    .contact h1{
+        font-size: 10vh;
+    }
+
+    #contact-select-1{
+        position: relative;
+
+        top: 0;
+        font-size: 3vh;
+        border-style: none;
+        background-color: transparent;
+    }
+
+    #contact-select-1:hover{
+        color: white;
+    }
+
+
+    #contact-select-2{
+        position: relative;
+        font-size: 3vh;
+        border-style: none;
+        background-color: transparent;
+    }
+
+    #contact-select-2:hover{
+        color: white;
+    }
+    
+    #contact-select-3{
+        position: relative;
+        font-size: 3vh;
+        border-style: none;
+        background-color: transparent;
+    }
+
+    #contact-select-3:hover{
+        color: white;
+    }
+
+
+    .contact label{
+        margin-top: 10%;
+        font-size: 2vh;
+    }
+
+    .contact input, textarea{
+        width: 100%;
+        height: 50px;
+        background-color: transparent;
+        border-style: solid;
+        border-color: darkgray;
+        border-width: 1px;
+        margin-top: 2%;
+    }
+
+    .contact input:hover{
+        background-color: darkgray;
+        color: #222;
+    }
+
+    .contact input:focus, input:focus {
+        color: darkgray;
+    }
+
+    .contact #submit{
+        color: darkgray;
+    }
+
+    .contact #submit:hover{
+        color: #222;
+        background-color: darkgray;
+    }
 }
 
 
@@ -575,6 +849,7 @@ Brand colors
         top: 0;
         left: 0;
         width: 20%;
+        max-width: 100%;
         height: 100%;
         background-color: transparent;
         opacity: 1;
@@ -587,6 +862,16 @@ Brand colors
     /* Navbar Button */
     .nav-button {
         display: none;
+    }
+
+    .main-logo{
+        position: fixed;
+        display: block;
+        bottom: 2%;
+        left: 1%;
+        width: 10%;
+        max-width: 15%;
+        height: auto;
     }
 
     /* Home Links */
@@ -613,6 +898,7 @@ Brand colors
     #carousel {
         margin-left: 20%;
         width: 100%;
+        max-width: 100%;
         padding: 0;
     }
 
@@ -657,6 +943,7 @@ Brand colors
 
     .info-display{
         position: absolute;
+        max-width: 60%;
         width: 60%;
         margin: 0;
         height: auto;
@@ -666,10 +953,6 @@ Brand colors
         background-color: #000000;
         color: white;
         border-radius: 2px;
-    }
-
-    .info-display p{
-
     }
 
     .gallery-name h3{
@@ -747,6 +1030,10 @@ Brand colors
         display: none;
     }
 
+    .accordion-buttons{
+        display: none;
+    }
+
     /* Brand Colors */
     .brand1{
         background-image: url(Assets/stock1.jpeg);
@@ -790,6 +1077,108 @@ Brand colors
         height: auto;
         z-index: 9999;
     }
+
+    /********************************************************************/
+    /* Contact page */
+
+    .contact-us{
+        width: 80%;
+        max-width: 100%;
+        margin-left: 20%;
+        height: auto;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .contact{
+        position: relative;
+        margin-left: 15%;
+        width: 80%;
+        height: auto;
+        padding: 5% 10% 5% 10%;
+        display: block;
+        border: #000000 solid;
+        border-width: 1px;
+        border-radius: 5px;
+        color: darkgray;
+        background-color: #222;
+    }
+
+    .contact h1{
+        font-size: 10vh;
+    }
+
+    #contact-select-1{
+        position: relative;
+
+        top: 0;
+        font-size: 3vh;
+        border-style: none;
+        background-color: transparent;
+    }
+
+    #contact-select-1:hover{
+        color: white;
+    }
+
+
+    #contact-select-2{
+        position: relative;
+        font-size: 3vh;
+        border-style: none;
+        background-color: transparent;
+    }
+
+    #contact-select-2:hover{
+        color: white;
+    }
+    
+    #contact-select-3{
+        position: relative;
+        font-size: 3vh;
+        border-style: none;
+        background-color: transparent;
+    }
+
+    #contact-select-3:hover{
+        color: white;
+    }
+
+
+    .contact label{
+        margin-top: 10%;
+        font-size: 2vh;
+    }
+
+    .contact input, textarea{
+        width: 100%;
+        height: 50px;
+        background-color: transparent;
+        border-style: solid;
+        border-color: darkgray;
+        border-width: 1px;
+        margin-top: 2%;
+    }
+
+    .contact input:hover{
+        background-color: darkgray;
+        color: #222;
+    }
+
+    .contact input:focus, input:focus {
+        color: darkgray;
+    }
+
+    .contact #submit{
+        color: darkgray;
+    }
+
+    .contact #submit:hover{
+        color: #222;
+        background-color: darkgray;
+    }
+
+
 }
 
 

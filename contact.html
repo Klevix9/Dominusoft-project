@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://kit.fontawesome.com/bcf3e0e401.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>ARCHITECHTONIC</title>
+    </head>
+
+    <body>
+        <!-- splash screen-->
+        <div id="splashscreen">
+            <h1 class="fade-in">LOGO</h1>
+        </div>
+
+        <header>
+            <img class="main-logo" src="Assets/Logo2.png" alt="Logo">
+            <button class="nav-button" onClick="toggle_nav"><i class="fas fa-solid fa-bars fa-lg"></i></button>
+        </header>
+
+        <div class="navbar">
+            <div class="Home-links nav-animation">
+                <a href="#" id="Home-home" class="nav-link-animation"><h1>Home</h1></a>
+                <div class="link-hover nav-links-hover"></div>
+                <a href="#" id="Home-about" class="nav-link-animation"><h1>About</h1></a>
+                <div class="link-hover"></div>
+                <a href="#" id="Home-services" class="nav-link-animation"><h1>Services</h1></a>
+                <div class="link-hover"></div>
+                <a href="#" id="Home-portofolio" class="nav-link-animation"><h1>Portofolio</h1></a>
+                <div class="link-hover"></div>
+                <a href="#" id="Home-blog" class="nav-link-animation"><h1>Blog</h1></a>
+                <div class="link-hover"></div>
+                <a href="#" id="Home-contact" class="nav-link-animation"><h1>Contact</h1></a>
+                <div class="link-hover"></div>
+            </div>
+        </div>
+
+        <div class="contact-us">
+            <form class="contact job-request">
+                <h1>CONTACT US</h1>
+                <p>Select type of inquiry</p>
+
+                <div class="contact-type">
+                    <button id="contact-select-1" onclick="change_contact(event, 1)" type="button"><i class="fa-regular fa-circle-right"></i>Job-Requests</button>
+                    <button id="contact-select-2" onclick="change_contact(event, 2)" type="button"><i class="fa-regular fa-circle-right"></i>Cooperating</button>
+                    <button id="contact-select-3" onclick="change_contact(event, 3)" type="button"><i class="fa-regular fa-circle-right"></i>Recruitment</button><div>
+                </div>
+                
+                <label for="name">Name1:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="company">Company Name:</label><br>
+                <input type="text" id="company" name="company" required><br><br>
+
+                <label for="email">Email address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="confirm_email">Confirm email:</label><br>
+                <input type="email" id="confirm_email" name="confirm_email" required><br><br>
+
+                <label for="telephone">Telephone number:</label><br>
+                <input type="tel" id="telephone" name="telephone"><br><br>
+
+                <label for="line_id">LINE ID (If you would like to be contacted via LINE):</label><br>
+                <input type="text" id="line_id" name="line_id"><br><br>
+
+                <label for="industry">Industry:</label><br>
+                <input type="text" id="industry" name="industry" required><br><br>
+
+                <label for="store_url">If you have an existing store, please enter its URL:</label><br>
+                <input type="url" id="store_url" name="store_url"><br><br>
+
+                <label for="inquiry">Content of inquiry:</label><br>
+                <textarea id="inquiry" name="inquiry" rows="4" required></textarea><br><br>
+
+                <input id="submit" type="submit" value="Submit">
+            </form>
+
+            <form class="contact cooperation">
+                <h1>CONTACT US</h1>
+                <p>Select type of inquiry</p>
+                
+                <div class="contact-type">
+                    <button id="contact-select-1" onClick="change_contact(1)" type="button"><i< class="fa-regular fa-circle-right"></i>Job-Requests</button>
+                    <button id="contact-select-2" onClick="change_contact(2)" type="button"><i class="fa-regular fa-circle-right"></i>Cooperating</button>
+                    <button id="contact-select-3" onClick="change_contact(3)" type="button"><i class="fa-regular fa-circle-right"></i>Recruitment</button><br>
+                </div>
+                
+                <label for="name">Name2:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="company">Company Name:</label><br>
+                <input type="text" id="company" name="company" required><br><br>
+
+                <label for="email">Email address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="confirm_email">Confirm email:</label><br>
+                <input type="email" id="confirm_email" name="confirm_email" required><br><br>
+
+                <label for="telephone">Telephone number:</label><br>
+                <input type="tel" id="telephone" name="telephone"><br><br>
+
+                <label for="line_id">LINE ID (If you would like to be contacted via LINE):</label><br>
+                <input type="text" id="line_id" name="line_id"><br><br>
+
+                <label for="industry">Industry:</label><br>
+                <input type="text" id="industry" name="industry" required><br><br>
+
+                <label for="store_url">If you have an existing store, please enter its URL:</label><br>
+                <input type="url" id="store_url" name="store_url"><br><br>
+
+                <label for="inquiry">Content of inquiry:</label><br>
+                <textarea id="inquiry" name="inquiry" rows="4" required></textarea><br><br>
+
+                <input id="submit" type="submit" value="Submit">
+            </form>
+
+            <form class="contact recruitment">
+                <h1>CONTACT US</h1>
+                <p>Select type of inquiry</p>
+
+                <div class="contact-type">
+                    <button id="contact-select-1" onClick="change_contact(1)" type="button"><i< class="fa-regular fa-circle-right"></i>Job-Requests</button>
+                    <button id="contact-select-2" onClick="change_contact(2)" type="button"><i class="fa-regular fa-circle-right"></i>Cooperating</button>
+                    <button id="contact-select-3" onClick="change_contact(3)" type="button"><i class="fa-regular fa-circle-right"></i>Recruitment</button><br>
+                </div>
+                
+                <label for="name">Name3:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="company">Company Name:</label><br>
+                <input type="text" id="company" name="company" required><br><br>
+
+                <label for="email">Email address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="confirm_email">Confirm email:</label><br>
+                <input type="email" id="confirm_email" name="confirm_email" required><br><br>
+
+                <label for="telephone">Telephone number:</label><br>
+                <input type="tel" id="telephone" name="telephone"><br><br>
+
+                <label for="line_id">LINE ID (If you would like to be contacted via LINE):</label><br>
+                <input type="text" id="line_id" name="line_id"><br><br>
+
+                <label for="industry">Industry:</label><br>
+                <input type="text" id="industry" name="industry" required><br><br>
+
+                <label for="store_url">If you have an existing store, please enter its URL:</label><br>
+                <input type="url" id="store_url" name="store_url"><br><br>
+
+                <label for="inquiry">Content of inquiry:</label><br>
+                <textarea id="inquiry" name="inquiry" rows="4" required></textarea><br><br>
+
+                <input id="submit" type="submit" value="Submit">
+            </form>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="bg-body-tertiary text-center">
+            <!-- Grid container -->
+            <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-facebook-f"></i
+                ></a>
+        
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-twitter"></i
+                ></a>
+        
+                <!-- Google -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-google"></i
+                ></a>
+        
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-instagram"></i
+                ></a>
+            </section>
+            <!-- Section: Social media -->
+        
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <p>
+                    Designing Spaces, Creating Stories 
+                </p>
+            </section>
+            <!-- Section: Text -->
+        
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row justify-content-center"> <!-- Adding justify-content-center class to center the columns -->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">ABOUT US</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-body" href="#!">Our Company</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Team</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Projects</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">History</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">CoNTACT</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-body" href="#!">Job Inquiry</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Cooperation Inquiry</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Recruitment Inquiry</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+            </div>
+            <!-- Grid container -->
+        </footer>
+        <!-- Footer -->
+        
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+
+</html>

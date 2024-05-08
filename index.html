@@ -6,20 +6,23 @@
         <script src="https://kit.fontawesome.com/bcf3e0e401.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
-        <title>TYPIQ</title>
+        <title>ARCHITECHTONIC</title>
     </head>
 
     <body>
         <!-- splash screen-->
         <div id="splashscreen">
-            <h1 class="fade-in">LOGO</h1>
+            <h1 class="fade-in">ARCHITECHTONIC</h1>
         </div>
 
-        <button class="nav-button" onClick="toggle_nav;"><i class="fas fa-solid fa-bars fa-lg"></i></button>
-
+        <header>
+            <img class="main-logo" src="Assets/Logo2.png" alt="Logo">
+            <button class="nav-button" onClick="toggle_nav"><i class="fas fa-solid fa-bars fa-lg"></i></button>
+        </header>
+        
         <div class="navbar">
             <div class="Home-links nav-animation">
-                <a href="#" id="Home-home" class="nav-link-animation"><h1>Home</h1></a>
+                <a href="index.html" id="Home-home" class="nav-link-animation"><h1>Home</h1></a>
                 <div class="link-hover nav-links-hover"></div>
                 <a href="#" id="Home-about" class="nav-link-animation"><h1>About</h1></a>
                 <div class="link-hover"></div>
@@ -29,7 +32,7 @@
                 <div class="link-hover"></div>
                 <a href="#" id="Home-blog" class="nav-link-animation"><h1>Blog</h1></a>
                 <div class="link-hover"></div>
-                <a href="#" id="Home-contact" class="nav-link-animation"><h1>Contact</h1></a>
+                <a href="contact.html" id="Home-contact" class="nav-link-animation"><h1>Contact</h1></a>
                 <div class="link-hover"></div>
             </div>
         </div>
@@ -64,13 +67,13 @@
 
         <div class="gallery">
             <div class="gallery-img">
-                <img src="Assets/stock1.jpeg" alt="Image">
-                <h3 class="gallery-name">Beauty Salon Name</h3>
+                <img src="Assets/project1.jpg" alt="Image">
+                <h3 class="gallery-name">ArchiVision Studio</h3>
                 <div class="info-display">
                     <p>
-                        Location: New York<br>
-                        Category: Lorem<br>
-                        Style: Barock        
+                        Location: New York City, USA<br>
+                        Category: Modern Urban Design<br>
+                        Design: Sleek and Minimalistic        
                     </p>
                 </div>
                 <a class="gallery-social-media" href="#"><i class="fa-brands fa-instagram"></i></a> <!-- instagram -->
@@ -78,13 +81,13 @@
                 <a class="gallery-social-media" href="#"><i class="fa-regular fa-address-book"></i></a> <!-- website -->
             </div>
             <div class="gallery-img">
-                <img src="Assets/stock2.jpeg" alt="Image">
-                <h3 class="gallery-name">New York Massachusetts</h3>
+                <img src="Assets/project2.jpg" alt="Image">
+                <h3 class="gallery-name">Heritage Architects</h3>
                 <div class="info-display">
                     <p>
-                        Location: New York<br>
-                        Category: Lorem<br>
-                        Style: Barock        
+                        Location: London, UK<br>
+                        Category: Historical Preservation<br>
+                        Design: Classic and Elegant        
                     </p>
                 </div>
                 <a class="gallery-social-media" href="#"><i class="fa-brands fa-instagram"></i></a> <!-- instagram -->
@@ -92,13 +95,13 @@
                 <a class="gallery-social-media" href="#"><i class="fa-regular fa-address-book"></i></a> <!-- website -->
             </div>
             <div class="gallery-img">
-                <img src="Assets/stock3.jpeg" alt="Image">
-                <h3 class="gallery-name">New York Massachusetts</h3>
+                <img src="Assets/project3.jpg" alt="Image">
+                <h3 class="gallery-name">Skyline Innovations</h3>
                 <div class="info-display">
                     <p>
-                        Location: New York<br>
-                        Category: Lorem<br>
-                        Style: Barock        
+                        Location: Dubai, UAE<br>
+                        Category: Futuristic Skyscrapers<br>
+                        Design: Innovative and Cutting-Edge        
                     </p>
                 </div>
                 <a class="gallery-social-media" href="#"><i class="fa-brands fa-instagram"></i></a> <!-- instagram -->
@@ -106,13 +109,13 @@
                 <a class="gallery-social-media" href="#"><i class="fa-regular fa-address-book"></i></a> <!-- website -->
             </div>
             <div class="gallery-img">
-                <img src="Assets/stock4.jpeg" alt="Image">
-                <h3 class="gallery-name">New York Massachusetts</h3>
+                <img src="Assets/project4.jpg" alt="Image">
+                <h3 class="gallery-name">GreenSpace Architects</h3>
                 <div class="info-display">
                     <p>
-                        Location: New York<br>
-                        Category: Lorem<br>
-                        Style: Barock        
+                        Location: Vancouver, Canada<br>
+                        Category: Sustainable Architecture<br>
+                        Design: Eco-Friendly and Nature-Inspired        
                     </p>
                 </div>
                 <a class="gallery-social-media" href="#"><i class="fa-brands fa-instagram"></i></a> <!-- instagram -->
@@ -120,13 +123,13 @@
                 <a class="gallery-social-media" href="#"><i class="fa-regular fa-address-book"></i></a> <!-- website -->
             </div>
             <div class="gallery-img">
-                <img src="Assets/stock5.jpeg" alt="Image">
-                <h3 class="gallery-name">New York Massachusetts</h3>
+                <img src="Assets/project5.jpg" alt="Image">
+                <h3 class="gallery-name">UrbanDesign Lab</h3>
                 <div class="info-display">
                     <p>
-                        Location: New York<br>
-                        Category: Lorem<br>
-                        Style: Barock        
+                        Location: Sydney, Australia<br>
+                        Category: Urban Renewal Projects<br>
+                        Design: Contemporary and Vibrant        
                     </p>
                 </div>
                 <a class="gallery-social-media" href="#"><i class="fa-brands fa-instagram"></i></a> <!-- instagram -->
@@ -134,30 +137,17 @@
                 <a class="gallery-social-media" href="#"><i class="fa-regular fa-address-book"></i></a> <!-- website -->
             </div>
         </div>
+        
 
         <div class="accordion">
             <div class="container-slides">
                 <ul class="slides">
                     <li class="slider active brand1">
-                        <a href="#" class="action" onclick="slider_change(event, this)"><span>Section title 1</span></a>
+                        <a href="#" class="action" onclick="slider_change(event, 0)"><span>Section title 1</span></a>
                         <div class="slide-content">
-                            <h2>Section title 1</h2>
+                            <h2>About us</h2>
                             <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Sed convallis magna eget placerat consequat. 
-                            In laoreet, risus ac dictum maximus, lectus est pharetra 
-                            dolor, quis suscipit dui ligula ut odio. Nullam condimentum 
-                            velit nec ligula pulvinar rhoncus. Nunc non ex non justo 
-                            dictum interdum id in lacus. Nunc a mauris in ipsum 
-                            condimentum blandit. Orci varius natoque penatibus et 
-                            magnis dis parturient montes, nascetur ridiculus mus. 
-                            Phasellus feugiat eros nec scelerisque varius. Mauris 
-                            blandit molestie ipsum, eu vulputate velit lacinia eu. 
-                            Praesent molestie sollicitudin tincidunt. Donec interdum 
-                            felis sed lorem tincidunt, vel condimentum dolor sagittis. 
-                            Maecenas nec metus risus. Integer semper libero sit amet 
-                            tellus fringilla mattis. Donec viverra a arcu ut consectetur. 
-                            Ut sagittis quam laoreet, placerat ex a, condimentum risus.
+                                Welcome to Architectonic, where innovation meets creativity. We are a passionate team of architects, designers, and engineers dedicated to transforming ideas into inspiring spaces. With a commitment to excellence and a focus on sustainable design, we strive to exceed our clients' expectations with every project.
                             </p>
                             <p>
                             
@@ -165,99 +155,56 @@
                         </div>
                     </li>
                     <li class="slider brand2">
-                        <a href="#" class="action" onclick="slider_change(event, this)"><span>Section title 2</span></a>
+                        <a href="#" class="action" onclick="slider_change(event, 1)"><span>Section title 2</span></a>
                         <div class="slide-content">
-                            <h2>Section title 2</h2>
+                            <h2>Our Story</h2>
                             <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Sed convallis magna eget placerat consequat. 
-                            In laoreet, risus ac dictum maximus, lectus est pharetra 
-                            dolor, quis suscipit dui ligula ut odio. Nullam condimentum 
-                            velit nec ligula pulvinar rhoncus. Nunc non ex non justo 
-                            dictum interdum id in lacus. Nunc a mauris in ipsum 
-                            condimentum blandit. Orci varius natoque penatibus et 
-                            magnis dis parturient montes, nascetur ridiculus mus. 
-                            Phasellus feugiat eros nec scelerisque varius. Mauris 
-                            blandit molestie ipsum, eu vulputate velit lacinia eu. 
-                            Praesent molestie sollicitudin tincidunt. Donec interdum 
-                            felis sed lorem tincidunt, vel condimentum dolor sagittis. 
-                            Maecenas nec metus risus. Integer semper libero sit amet 
-                            tellus fringilla mattis. Donec viverra a arcu ut consectetur. 
-                            Ut sagittis quam laoreet, placerat ex a, condimentum risus.
+                                Architectonic was founded with a vision to redefine the architectural landscape. What started as a small studio has grown into a dynamic firm known for its innovative designs and client-centric approach. Over the years, we have built a reputation for delivering exceptional results that blend functionality, aesthetics, and sustainability.
+
                             </p>
                         </div>
                     </li>
                     <li class="slider brand3">
-                        <a href="#" class="action" onclick="slider_change(event, this)"><span>Section title 3</span></a>
+                        <a href="#" class="action" onclick="slider_change(event, 2)"><span>Section title 3</span></a>
                         <div class="slide-content">
-                            <h2>Section title 3</h2>
+                            <h2>Philosophy and Approach</h2>
                             <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Sed convallis magna eget placerat consequat. 
-                            In laoreet, risus ac dictum maximus, lectus est pharetra 
-                            dolor, quis suscipit dui ligula ut odio. Nullam condimentum 
-                            velit nec ligula pulvinar rhoncus. Nunc non ex non justo 
-                            dictum interdum id in lacus. Nunc a mauris in ipsum 
-                            condimentum blandit. Orci varius natoque penatibus et 
-                            magnis dis parturient montes, nascetur ridiculus mus. 
-                            Phasellus feugiat eros nec scelerisque varius. Mauris 
-                            blandit molestie ipsum, eu vulputate velit lacinia eu. 
-                            Praesent molestie sollicitudin tincidunt. Donec interdum 
-                            felis sed lorem tincidunt, vel condimentum dolor sagittis. 
-                            Maecenas nec metus risus. Integer semper libero sit amet 
-                            tellus fringilla mattis. Donec viverra a arcu ut consectetur. 
-                            Ut sagittis quam laoreet, placerat ex a, condimentum risus.
+                                At Architectonic, we believe that great design has the power to improve lives and shape communities. Our philosophy is rooted in collaboration, creativity, and attention to detail. From concept to completion, we approach each project with a fresh perspective, drawing inspiration from our clients' vision and the surrounding environment.
                             </p>
                         </div>
                     </li>
                     <li class="slider brand4">
-                        <a href="#" class="action" onclick="slider_change(event, this)"><span>Section title 4</span></a>
+                        <a href="#" class="action" onclick="slider_change(event, 3)"><span>Section title 4</span></a>
                         <div class="slide-content">
-                            <h2>Section title 4</h2>
+                            <h2>Team Members</h2>
                             <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Sed convallis magna eget placerat consequat. 
-                            In laoreet, risus ac dictum maximus, lectus est pharetra 
-                            dolor, quis suscipit dui ligula ut odio. Nullam condimentum 
-                            velit nec ligula pulvinar rhoncus. Nunc non ex non justo 
-                            dictum interdum id in lacus. Nunc a mauris in ipsum 
-                            condimentum blandit. Orci varius natoque penatibus et 
-                            magnis dis parturient montes, nascetur ridiculus mus. 
-                            Phasellus feugiat eros nec scelerisque varius. Mauris 
-                            blandit molestie ipsum, eu vulputate velit lacinia eu. 
-                            Praesent molestie sollicitudin tincidunt. Donec interdum 
-                            felis sed lorem tincidunt, vel condimentum dolor sagittis. 
-                            Maecenas nec metus risus. Integer semper libero sit amet 
-                            tellus fringilla mattis. Donec viverra a arcu ut consectetur. 
-                            Ut sagittis quam laoreet, placerat ex a, condimentum risus.
+                                Meet the talented individuals behind Architectonic. Our diverse team brings together a wealth of experience and expertise, united by a shared passion for design excellence. From architects and interior designers to engineers and project managers, we work seamlessly together to turn concepts into reality.
                             </p>
                         </div>
                     </li>
                     <li class="slider brand5">
-                        <a href="#" class="action" onclick="slider_change(event, this)"><span>Section title 5</span></a>
+                        <a href="#" class="action" onclick="slider_change(event, 4)"><span>Section title 5</span></a>
                         <div class="slide-content">
-                            <h2>Section title 5</h2>
+                            <h2>Portofolio</h2>
                             <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Sed convallis magna eget placerat consequat. 
-                            In laoreet, risus ac dictum maximus, lectus est pharetra 
-                            dolor, quis suscipit dui ligula ut odio. Nullam condimentum 
-                            velit nec ligula pulvinar rhoncus. Nunc non ex non justo 
-                            dictum interdum id in lacus. Nunc a mauris in ipsum 
-                            condimentum blandit. Orci varius natoque penatibus et 
-                            magnis dis parturient montes, nascetur ridiculus mus. 
-                            Phasellus feugiat eros nec scelerisque varius. Mauris 
-                            blandit molestie ipsum, eu vulputate velit lacinia eu. 
-                            Praesent molestie sollicitudin tincidunt. Donec interdum 
-                            felis sed lorem tincidunt, vel condimentum dolor sagittis. 
-                            Maecenas nec metus risus. Integer semper libero sit amet 
-                            tellus fringilla mattis. Donec viverra a arcu ut consectetur. 
-                            Ut sagittis quam laoreet, placerat ex a, condimentum risus.
+                                Explore our portfolio to see the breadth and depth of our work. From residential homes and commercial spaces to cultural institutions and urban developments, each project showcases our commitment to innovation and quality craftsmanship. We take pride in our portfolio and look forward to adding your project to our success stories.
                             </p>
                         </div>
                     </li>
                 </ul>
             </div>
+            <div class="accordion-buttons">
+                <button class="accordion-control-prev" onclick="slider_change_prev(event)" type="button">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="accordion-control-next" onclick="slider_change_next(event)" type="button">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="contact-us">
+            
         </div>
         
         <!-- Footer -->
@@ -291,100 +238,55 @@
             <!-- Section: Text -->
             <section class="mb-4">
                 <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-                repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
-                harum corrupti dicta, aliquam sequi voluptate quas.
+                    Designing Spaces, Creating Stories 
                 </p>
             </section>
             <!-- Section: Text -->
-        
             <!-- Section: Links -->
             <section class="">
                 <!--Grid row-->
-                <div class="row">
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-        
-                    <ul class="list-unstyled mb-0">
-                    <li>
-                        <a class="text-body" href="#!">Link 1</a>
-                    </li>
-                    <li>
-                        <a class="text-body" href="#!">Link 2</a>
-                    </li>
-                    <li>
-                        <a class="text-body" href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a class="text-body" href="#!">Link 4</a>
-                    </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
-        
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-        
-                    <ul class="list-unstyled mb-0">
-                    <li>
-                        <a class="text-body" href="#!">Link 1</a>
-                    </li>
-                    <li>
-                        <a class="text-body" href="#!">Link 2</a>
-                    </li>
-                    <li>
-                        <a class="text-body" href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a class="text-body" href="#!">Link 4</a>
-                    </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
-        
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-        
-                    <ul class="list-unstyled mb-0">
-                    <li>
-                        <a class="text-body" href="#!">Link 1</a>
-                    </li>
-                    <li>
-                        <a class="text-body" href="#!">Link 2</a>
-                    </li>
-                    <li>
-                        <a class="text-body" href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a class="text-body" href="#!">Link 4</a>
-                    </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
-        
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-        
-                    <ul class="list-unstyled mb-0">
-                    <li>
-                        <a class="text-body" href="#!">Link 1</a>
-                    </li>
-                    <li>
-                        <a class="text-body" href="#!">Link 2</a>
-                    </li>
-                    <li>
-                        <a class="text-body" href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a class="text-body" href="#!">Link 4</a>
-                    </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
+                <div class="row justify-content-center"> <!-- Adding justify-content-center class to center the columns -->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">ABOUT US</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-body" href="#!">Our Company</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Team</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Projects</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">History</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">CoNTACT</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-body" href="#!">Job Inquiry</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Cooperation Inquiry</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Recruitment Inquiry</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
                 </div>
                 <!--Grid row-->
             </section>
