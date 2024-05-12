@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="https://kit.fontawesome.com/bcf3e0e401.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../Styles/style.css">
         <title>ARCHITECHTONIC</title>
     </head>
 
@@ -16,7 +16,7 @@
         </div>
 
         <header>
-            <img class="main-logo" src="Assets/Logo2.png" alt="Logo">
+            <img class="main-logo" src="../Assets/Logo2.png" alt="Logo">
             <button class="nav-button" onClick="toggle_nav"><i class="fas fa-solid fa-bars fa-lg"></i></button>
         </header>
 
@@ -45,14 +45,17 @@
                 <div class="contact-type">
                     <button id="contact-select-1" onclick="change_contact(event, 1)" type="button"><i class="fa-regular fa-circle-right"></i>Job-Requests</button>
                     <button id="contact-select-2" onclick="change_contact(event, 2)" type="button"><i class="fa-regular fa-circle-right"></i>Cooperating</button>
-                    <button id="contact-select-3" onclick="change_contact(event, 3)" type="button"><i class="fa-regular fa-circle-right"></i>Recruitment</button><div>
+                    <button id="contact-select-3" onclick="change_contact(event, 3)" type="button"><i class="fa-regular fa-circle-right"></i>Recruitment</button>
                 </div>
                 
-                <label for="name">Name1:</label><br>
+                <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
 
                 <label for="company">Company Name:</label><br>
                 <input type="text" id="company" name="company" required><br><br>
+
+                <label for="company">Industry:</label><br>
+                <input type="text" id="industry" name="industry" required><br><br>
 
                 <label for="email">Email address:</label><br>
                 <input type="email" id="email" name="email" required><br><br>
@@ -83,12 +86,12 @@
                 <p>Select type of inquiry</p>
                 
                 <div class="contact-type">
-                    <button id="contact-select-1" onClick="change_contact(1)" type="button"><i< class="fa-regular fa-circle-right"></i>Job-Requests</button>
-                    <button id="contact-select-2" onClick="change_contact(2)" type="button"><i class="fa-regular fa-circle-right"></i>Cooperating</button>
-                    <button id="contact-select-3" onClick="change_contact(3)" type="button"><i class="fa-regular fa-circle-right"></i>Recruitment</button><br>
+                    <button id="contact-select-1" onclick="change_contact(event, 1)" type="button"><i class="fa-regular fa-circle-right"></i>Job-Requests</button>
+                    <button id="contact-select-2" onclick="change_contact(event, 2)" type="button"><i class="fa-regular fa-circle-right"></i>Cooperating</button>
+                    <button id="contact-select-3" onclick="change_contact(event, 3)" type="button"><i class="fa-regular fa-circle-right"></i>Recruitment</button>
                 </div>
                 
-                <label for="name">Name2:</label><br>
+                <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
 
                 <label for="company">Company Name:</label><br>
@@ -123,16 +126,31 @@
                 <p>Select type of inquiry</p>
 
                 <div class="contact-type">
-                    <button id="contact-select-1" onClick="change_contact(1)" type="button"><i< class="fa-regular fa-circle-right"></i>Job-Requests</button>
-                    <button id="contact-select-2" onClick="change_contact(2)" type="button"><i class="fa-regular fa-circle-right"></i>Cooperating</button>
-                    <button id="contact-select-3" onClick="change_contact(3)" type="button"><i class="fa-regular fa-circle-right"></i>Recruitment</button><br>
+                    <button id="contact-select-1" onclick="change_contact(event, 1)" type="button"><i class="fa-regular fa-circle-right"></i>Job-Requests</button>
+                    <button id="contact-select-2" onclick="change_contact(event, 2)" type="button"><i class="fa-regular fa-circle-right"></i>Cooperating</button>
+                    <button id="contact-select-3" onclick="change_contact(event, 3)" type="button"><i class="fa-regular fa-circle-right"></i>Recruitment</button>
                 </div>
-                
-                <label for="name">Name3:</label><br>
+
+                <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
 
-                <label for="company">Company Name:</label><br>
-                <input type="text" id="company" name="company" required><br><br>
+                <label for="surname">Surname:</label><br>
+                <input type="text" id="surname" name="surname" required><br><br>
+
+                <label for="age">Age:</label><br>
+                <!-- change to number -->
+                <input type="text" id="age" name="age" required><br><br> 
+
+                <label for="Gender">Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label><br><br>
+
+                <label for="adress">Address:</label><br>
+                <input type="text" id="address" name="address"><br><br>
 
                 <label for="email">Email address:</label><br>
                 <input type="email" id="email" name="email" required><br><br>
@@ -140,20 +158,21 @@
                 <label for="confirm_email">Confirm email:</label><br>
                 <input type="email" id="confirm_email" name="confirm_email" required><br><br>
 
-                <label for="telephone">Telephone number:</label><br>
-                <input type="tel" id="telephone" name="telephone"><br><br>
+                <label for="work_history">Work History:</label><br>
+                <input type="text" id="work_history" name="work_history"><br><br>
 
-                <label for="line_id">LINE ID (If you would like to be contacted via LINE):</label><br>
-                <input type="text" id="line_id" name="line_id"><br><br>
+                <label for="job_type">Job Type:</label><br>
+                <input type="text" id="job_type" name="job_type"><br><br>
 
-                <label for="industry">Industry:</label><br>
-                <input type="text" id="industry" name="industry" required><br><br>
+                <label for="cover_letter">Cover Letter:</label><br>
+                <div class="custom-file-input">
+                    <input type="file" id="cover_letter" name="cover_letter">
+                </div>
 
-                <label for="store_url">If you have an existing store, please enter its URL:</label><br>
-                <input type="url" id="store_url" name="store_url"><br><br>
-
-                <label for="inquiry">Content of inquiry:</label><br>
-                <textarea id="inquiry" name="inquiry" rows="4" required></textarea><br><br>
+                <label for="resume">Resume:</label><br>
+                <div class="custom-file-input">
+                    <input type="file" id="resume" name="resume">
+                </div><br><br>
 
                 <input id="submit" type="submit" value="Submit">
             </form>
@@ -249,7 +268,7 @@
         </footer>
         <!-- Footer -->
         
-        <script src="script.js"></script>
+        <script src="../scripts/script.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>

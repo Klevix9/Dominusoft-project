@@ -147,11 +147,10 @@ $(window).resize(function() {
 });
 
 
-// Contact page
 
-// 1 = job request
-// 2 = cooperation
-// 3 = recruitment
+// Contact Page
+
+// Switch form
 function change_contact(event, type) {
     event.preventDefault();
 
@@ -163,28 +162,53 @@ function change_contact(event, type) {
         form.style.display = 'none';
     });
 
-    // Reset button rotation
-    const buttons = document.querySelectorAll('.contact-select');
+    // Reset button rotation and hide all forms
+    const buttons = document.querySelectorAll('.contact-type button');
     buttons.forEach(button => {
         button.style.transform = 'rotate(0deg)';
     });
 
-    // Display the selected form and rotate the corresponding button
+    // Display the selected form and rotate the corresponding button icon
     if (type === 1) {
         document.querySelector('.job-request').style.display = 'block';
         document.querySelector('.cooperation').style.display = 'none';
         document.querySelector('.recruitment').style.display = 'none';
-        document.querySelector('#contact-select-1').style.transform = 'rotate(90deg)';
+        document.querySelectorAll('#contact-select-1 i').forEach(icon => {
+            icon.style.transform = 'rotate(90deg)';
+        });
+        document.querySelectorAll('#contact-select-2 i').forEach(icon => {
+            icon.style.transform = 'rotate(0deg)';
+        });
+        document.querySelectorAll('#contact-select-3 i').forEach(icon => {
+            icon.style.transform = 'rotate(0deg)';
+        });
     } else if (type === 2) {
-        document.querySelector('.cooperation').style.display = 'none';
+        document.querySelector('.job-request').style.display = 'none';
         document.querySelector('.cooperation').style.display = 'block';
         document.querySelector('.recruitment').style.display = 'none';
-        document.querySelector('#contact-select-2').style.transform = 'rotate(90deg)';
+        document.querySelectorAll('#contact-select-1 i').forEach(icon => {
+            icon.style.transform = 'rotate(0deg)';
+        });
+        document.querySelectorAll('#contact-select-2 i').forEach(icon => {
+            icon.style.transform = 'rotate(90deg)';
+        });
+        document.querySelectorAll('#contact-select-3 i').forEach(icon => {
+            icon.style.transform = 'rotate(0deg)';
+        });
     } else if (type === 3) {
-        document.querySelector('.recruitment').style.display = 'none';
+        document.querySelector('.job-request').style.display = 'none';
         document.querySelector('.cooperation').style.display = 'none';
         document.querySelector('.recruitment').style.display = 'block';
-        document.querySelector('#contact-select-3').style.transform = 'rotate(90deg)';
+        document.querySelectorAll('#contact-select-1 i').forEach(icon => {
+            icon.style.transform = 'rotate(0deg)';
+        });
+        document.querySelectorAll('#contact-select-2 i').forEach(icon => {
+            icon.style.transform = 'rotate(0deg)';
+        });
+        document.querySelectorAll('#contact-select-3 i').forEach(icon => {
+            icon.style.transform = 'rotate(90deg)';
+        });
     }
 }
+
 

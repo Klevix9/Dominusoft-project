@@ -9,7 +9,7 @@ html{
 
 body{
     max-width: 100%;
-    background-image: url(Assets/background3.png);
+    background-image: url(../Assets/background3.png);
     background-size: repeat;
     overflow-x: hidden;
 }
@@ -50,6 +50,27 @@ Brand colors
         color: darkgray;
         font-size: 10vh;
         z-index: 9998;
+    }
+
+    .nav-link-animation {
+        position: relative;
+        text-decoration: none;
+    }
+    
+    .nav-link-animation::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-link-animation:hover::before {
+        transform: scaleX(1);
     }
 
     /* Navbar Animation */
@@ -192,11 +213,6 @@ Brand colors
         top: 0;
     }
 
-    /* Animation for underline */
-    @keyframes gallery-name {
-        
-    }
-
     .info-display {
         display: inline-block;
         width: 60%;
@@ -297,31 +313,31 @@ Brand colors
 
     /* Brand Colors */
     .brand1{
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 1.jpeg);
         background-size: cover;
         background-position-y: top;
     }
     .brand2{
         background-color: #b43e8f;
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 2.jpeg);
         background-size: cover;
         background-position-y: top;
     }
     .brand3{
         background-color: #6200b3;
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 3.jpeg);
         background-size: cover;
         background-position-y: top;
     }
     .brand4{
         background-color: #3b0086;
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 4.jpeg);
         background-size: cover;
         background-position-y: top;
     }
     .brand5{
         background-color: #290628;
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 5.jpeg);
         background-size: cover;
         background-position-y: top;
     }
@@ -354,7 +370,7 @@ Brand colors
 
     .contact{
         position: relative;
-        width: 90%;
+        width: 98%;
         margin: auto;
         height: auto;
         padding: 5% 10% 5% 10%;
@@ -367,7 +383,16 @@ Brand colors
     }
 
     .contact h1{
-        font-size: 6vh;
+        font-size: 10vh;
+    }
+
+    #contact-select-1, #contact-select-2, #contact-select-3 {
+        color: darkgray;
+        padding-left: 30px;
+    }
+    
+    #contact-select-1 i, #contact-select-2 i, #contact-select-3 i {
+        padding-right: 10px;
     }
 
     #contact-select-1{
@@ -377,6 +402,10 @@ Brand colors
         font-size: 3vh;
         border-style: none;
         background-color: transparent;
+    }
+
+    #contact-select-1 i{
+        transform: rotate(90deg);
     }
 
     #contact-select-1:hover{
@@ -406,6 +435,17 @@ Brand colors
         color: white;
     }
 
+    .job-request{
+        display: display;
+    }
+
+    .cooperation{
+        display: none;
+    }
+
+    .recruitment{
+        display: none;
+    }
 
     .contact label{
         margin-top: 10%;
@@ -439,6 +479,65 @@ Brand colors
         color: #222;
         background-color: darkgray;
     }
+
+    .radio-container {
+        display: inline-block;
+    }
+
+    input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #222;
+        background-color: white;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        top: 5px;
+    }
+
+    input[type="radio"]:checked {
+        background-color: #222;
+    }
+
+    label {
+        padding-left: 10px;
+    }
+
+    input[type="radio"]:hover {
+        background-color: darkgray;
+    }
+
+    input[type="file"] {
+        display: block;
+    }
+
+    .custom-file-input {
+        position: relative;
+        width: 100%;
+    }
+
+    .custom-file-input::before {
+        content: 'Choose File';
+        display: inline-block;
+        background-color: transparent;
+        border: 2px solid #555;
+        padding: 8px 12px;
+        cursor: pointer;
+        width: calc(100% - 4px);
+        text-align: center;
+    }
+
+    .custom-file-input:hover::before {
+        background-color: #ddd;
+    }
+
+    input[type="file"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
 }
 
 
@@ -464,22 +563,25 @@ Brand colors
         z-index: 9998;
     }
 
-    /* Navbar Animation */
-    @keyframes nav-animation {
-        0% {
-            opacity: 0;
-            top: -100%;
-        }
-        100% {
-            opacity: 1;
-            top: 50%;
-        }
+    .nav-link-animation {
+        position: relative;
+        text-decoration: none;
     }
-
-    .nav-animation {
-        opacity: 0;
-        animation: nav-animation 1s ease-in forwards; /* Corrected animation name */
-        animation-direction: normal;
+    
+    .nav-link-animation::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-link-animation:hover::before {
+        transform: scaleX(1);
     }
 
     /* Header */
@@ -597,12 +699,7 @@ Brand colors
         color: rgb(0, 0, 0);
         font-size: 7vw;
         text-decoration: underline;
-        top: 0;
-    }
-
-    /* animation for underline */
-    @keyframes gallery-name {
-        
+        top: -5px;
     }
 
     .info-display {
@@ -691,31 +788,31 @@ Brand colors
 
     /* Brand Colors */
     .brand1{
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 1.jpeg);
         background-size: cover;
         background-position-y: top;
     }
     .brand2{
         background-color: #b43e8f;
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 2.jpeg);
         background-size: cover;
         background-position-y: top;
     }
     .brand3{
         background-color: #6200b3;
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 3.jpeg);
         background-size: cover;
         background-position-y: top;
     }
     .brand4{
         background-color: #3b0086;
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 4.jpeg);
         background-size: cover;
         background-position-y: top;
     }
     .brand5{
         background-color: #290628;
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 5.jpeg);
         background-size: cover;
         background-position-y: top;
     }
@@ -746,7 +843,7 @@ Brand colors
 
     .contact{
         position: relative;
-        width: 90%;
+        width: 98%;
         margin: auto;
         height: auto;
         padding: 5% 10% 5% 10%;
@@ -762,6 +859,15 @@ Brand colors
         font-size: 10vh;
     }
 
+    #contact-select-1, #contact-select-2, #contact-select-3 {
+        color: darkgray;
+        padding-left: 30px;
+    }
+    
+    #contact-select-1 i, #contact-select-2 i, #contact-select-3 i {
+        padding-right: 10px;
+    }
+
     #contact-select-1{
         position: relative;
 
@@ -769,6 +875,10 @@ Brand colors
         font-size: 3vh;
         border-style: none;
         background-color: transparent;
+    }
+
+    #contact-select-1 i{
+        transform: rotate(90deg);
     }
 
     #contact-select-1:hover{
@@ -798,6 +908,17 @@ Brand colors
         color: white;
     }
 
+    .job-request{
+        display: display;
+    }
+
+    .cooperation{
+        display: none;
+    }
+
+    .recruitment{
+        display: none;
+    }
 
     .contact label{
         margin-top: 10%;
@@ -831,6 +952,65 @@ Brand colors
         color: #222;
         background-color: darkgray;
     }
+
+    .radio-container {
+        display: inline-block;
+    }
+
+    input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #222;
+        background-color: white;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        top: 5px;
+    }
+
+    input[type="radio"]:checked {
+        background-color: #222;
+    }
+
+    label {
+        padding-left: 10px;
+    }
+
+    input[type="radio"]:hover {
+        background-color: darkgray;
+    }
+
+    input[type="file"] {
+        display: block;
+    }
+
+    .custom-file-input {
+        position: relative;
+        width: 100%;
+    }
+
+    .custom-file-input::before {
+        content: 'Choose File';
+        display: inline-block;
+        background-color: transparent;
+        border: 2px solid #555;
+        padding: 8px 12px;
+        cursor: pointer;
+        width: calc(100% - 4px);
+        text-align: center;
+    }
+
+    .custom-file-input:hover::before {
+        background-color: #ddd;
+    }
+
+    input[type="file"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
 }
 
 
@@ -858,7 +1038,27 @@ Brand colors
         z-index: 9998;
     }
 
-
+    .nav-link-animation {
+        position: relative;
+        text-decoration: none;
+    }
+    
+    .nav-link-animation::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-link-animation:hover::before {
+        transform: scaleX(1);
+    }
+    
     /* Navbar Button */
     .nav-button {
         display: none;
@@ -946,13 +1146,35 @@ Brand colors
         max-width: 60%;
         width: 60%;
         margin: 0;
-        height: auto;
+        top: 85%;
         max-height: 10%;
-        top: 70%;
         border: #000000 solid;
-        background-color: #000000;
+        background-color: #222;
         color: white;
         border-radius: 2px;
+    }
+    
+    .gallery-name::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: darkgray;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .gallery-name:hover::before {
+        transform: scaleX(1);
+    }
+    
+    .gallery-name{
+        position: absolute;
+        top: -70px;
+        text-decoration: none;
+        color: darkgray;
     }
 
     .gallery-name h3{
@@ -962,14 +1184,18 @@ Brand colors
         width: 40%;
     }
 
-    .gallery-social-media{
-        display: block;
-        width: 40%;
-        position: relative;
+    .gallery-social-media {
+        display: inline-block;
         font-size: 2vw;
         color: black;
-        padding: 1%;
+        padding: 0;
+        width: 40%;
     }
+
+    .gallery-social-media a{
+        width: 20px;
+    }
+    
     
     .info-display a {
         color: white;
@@ -1036,31 +1262,31 @@ Brand colors
 
     /* Brand Colors */
     .brand1{
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 1.jpeg);
         background-size: cover;
         background-position-y: top;
     }
     .brand2{
         background-color: #b43e8f;
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 2.jpeg);
         background-size: cover;
         background-position-y: top;
     }
     .brand3{
         background-color: #6200b3;
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 3.jpeg);
         background-size: cover;
         background-position-y: top;
     }
     .brand4{
         background-color: #3b0086;
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 4.jpeg);
         background-size: cover;
         background-position-y: top;
     }
     .brand5{
         background-color: #290628;
-        background-image: url(Assets/stock1.jpeg);
+        background-image: url(../Assets/stock\ 5.jpeg);
         background-size: cover;
         background-position-y: top;
     }
@@ -1108,6 +1334,15 @@ Brand colors
         font-size: 10vh;
     }
 
+    #contact-select-1, #contact-select-2, #contact-select-3 {
+        color: darkgray;
+        padding-left: 30px;
+    }
+    
+    #contact-select-1 i, #contact-select-2 i, #contact-select-3 i {
+        padding-right: 10px;
+    }
+
     #contact-select-1{
         position: relative;
 
@@ -1115,6 +1350,10 @@ Brand colors
         font-size: 3vh;
         border-style: none;
         background-color: transparent;
+    }
+
+    #contact-select-1 i{
+        transform: rotate(90deg);
     }
 
     #contact-select-1:hover{
@@ -1144,6 +1383,17 @@ Brand colors
         color: white;
     }
 
+    .job-request{
+        display: display;
+    }
+
+    .cooperation{
+        display: none;
+    }
+
+    .recruitment{
+        display: none;
+    }
 
     .contact label{
         margin-top: 10%;
@@ -1178,9 +1428,65 @@ Brand colors
         background-color: darkgray;
     }
 
+    .radio-container {
+        display: inline-block;
+    }
 
+    input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #222;
+        background-color: white;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        top: 5px;
+    }
+
+    input[type="radio"]:checked {
+        background-color: #222;
+    }
+
+    label {
+        padding-left: 10px;
+    }
+
+    input[type="radio"]:hover {
+        background-color: darkgray;
+    }
+
+    input[type="file"] {
+        display: block;
+    }
+
+    .custom-file-input {
+        position: relative;
+        width: 100%;
+    }
+
+    .custom-file-input::before {
+        content: 'Choose File';
+        display: inline-block;
+        background-color: transparent;
+        border: 2px solid #555;
+        padding: 8px 12px;
+        cursor: pointer;
+        width: calc(100% - 4px);
+        text-align: center;
+    }
+
+    .custom-file-input:hover::before {
+        background-color: #ddd;
+    }
+
+    input[type="file"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
 }
-
 
 /*splach screen*/
 #splashscreen {
