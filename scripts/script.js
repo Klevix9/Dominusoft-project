@@ -1,14 +1,45 @@
 var media_query = window.matchMedia("(min-width:992px)");
 
 
-//splash screen
+// splash screen
 const splash = document.querySelector('#splashscreen');
 
-document.addEventListener('DOMContentLoaded', (e)=>{
-    setTimeout(()=>{
-        splash.classList.add('display-none');
-    }, 0);//0 -> 2000 change later
+document.addEventListener('DOMContentLoaded', (e) => {
+    setTimeout(() => {
+        splash.classList.add('hidden');
+    }, 0); // 3000 milliseconds = 3 seconds
 });
+
+// Function to disable scrolling
+function disableScroll() {
+    // Get the current scroll position
+    var scrollPosition = [
+        self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+        self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+    ];
+    // Save the current scroll position
+    var html = document.getElementsByTagName('html')[0];
+    html.style.overflow = 'hidden';
+    html.style.position = 'fixed';
+    html.style.width = '100%';
+    html.style.top = `-${scrollPosition[1]}px`;
+}
+
+// Function to enable scrolling
+function enableScroll() {
+    var html = document.getElementsByTagName('html')[0];
+    html.style.overflow = '';
+    html.style.position = '';
+    html.style.width = '';
+    html.style.top = '';
+    window.scrollTo(scrollPosition[0], scrollPosition[1]);
+}
+
+// Example usage: disable scrolling for 3 seconds
+disableScroll();
+setTimeout(enableScroll, 0);
+
+
 
 // Navigation bar
 
@@ -210,5 +241,6 @@ function change_contact(event, type) {
         });
     }
 }
+
 
 

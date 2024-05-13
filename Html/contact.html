@@ -12,7 +12,7 @@
     <body>
         <!-- splash screen-->
         <div id="splashscreen">
-            <h1 class="fade-in">LOGO</h1>
+            <h1 class="fade-in" style="font-size: 400%;">ARCHITECHTONIC</h1>
         </div>
 
         <header>
@@ -22,7 +22,7 @@
 
         <div class="navbar">
             <div class="Home-links nav-animation">
-                <a href="#" id="Home-home" class="nav-link-animation"><h1>Home</h1></a>
+                <a href="../Html/index.html" id="Home-home" class="nav-link-animation"><h1>Home</h1></a>
                 <div class="link-hover nav-links-hover"></div>
                 <a href="#" id="Home-about" class="nav-link-animation"><h1>About</h1></a>
                 <div class="link-hover"></div>
@@ -48,37 +48,35 @@
                     <button id="contact-select-3" onclick="change_contact(event, 3)" type="button"><i class="fa-regular fa-circle-right"></i>Recruitment</button>
                 </div>
                 
-                <label for="name">Name:</label><br>
+                <label for="name">Name:<p class="required-warning">*Required</p></label><br>
                 <input type="text" id="name" name="name" required><br><br>
 
-                <label for="company">Company Name:</label><br>
+                <label for="company">Company Name:<p class="required-warning">*Required</p></label><br>
                 <input type="text" id="company" name="company" required><br><br>
 
                 <label for="company">Industry:</label><br>
-                <input type="text" id="industry" name="industry" required><br><br>
+                <input type="text" id="industry" name="industry"><br><br>
 
-                <label for="email">Email address:</label><br>
+                <label for="email">Email address:<p class="required-warning">*Required</p></label><br>
                 <input type="email" id="email" name="email" required><br><br>
 
-                <label for="confirm_email">Confirm email:</label><br>
+                <label for="confirm_email">Confirm email:<p class="required-warning">*Required</p></label><br>
                 <input type="email" id="confirm_email" name="confirm_email" required><br><br>
 
-                <label for="telephone">Telephone number:</label><br>
-                <input type="tel" id="telephone" name="telephone"><br><br>
+                <label for="telephone">Telephone number:<p class="required-warning">*Required</p></label><br>
+                <input type="tel" id="telephone" name="telephone" required><br><br>
 
                 <label for="line_id">LINE ID (If you would like to be contacted via LINE):</label><br>
                 <input type="text" id="line_id" name="line_id"><br><br>
 
-                <label for="industry">Industry:</label><br>
-                <input type="text" id="industry" name="industry" required><br><br>
-
                 <label for="store_url">If you have an existing store, please enter its URL:</label><br>
                 <input type="url" id="store_url" name="store_url"><br><br>
 
-                <label for="inquiry">Content of inquiry:</label><br>
+                <label for="inquiry">Content of inquiry:<p class="required-warning">*Required</p></label><br>
                 <textarea id="inquiry" name="inquiry" rows="4" required></textarea><br><br>
 
-                <input id="submit" type="submit" value="Submit">
+                <input id="submit" type="submit" value="Submit" onclick="return validateForm()">
+
             </form>
 
             <form class="contact cooperation">
@@ -91,34 +89,34 @@
                     <button id="contact-select-3" onclick="change_contact(event, 3)" type="button"><i class="fa-regular fa-circle-right"></i>Recruitment</button>
                 </div>
                 
-                <label for="name">Name:</label><br>
+                <label for="name">Name:<p class="required-warning">*Required</p></label><br>
                 <input type="text" id="name" name="name" required><br><br>
 
-                <label for="company">Company Name:</label><br>
+                <label for="company">Company Name:<p class="required-warning">*Required</p></label><br>
                 <input type="text" id="company" name="company" required><br><br>
 
-                <label for="email">Email address:</label><br>
+                <label for="email">Email address:<p class="required-warning">*Required</p></label><br>
                 <input type="email" id="email" name="email" required><br><br>
 
-                <label for="confirm_email">Confirm email:</label><br>
+                <label for="confirm_email">Confirm email:<p class="required-warning">*Required</p></label><br>
                 <input type="email" id="confirm_email" name="confirm_email" required><br><br>
 
-                <label for="telephone">Telephone number:</label><br>
-                <input type="tel" id="telephone" name="telephone"><br><br>
+                <label for="telephone">Telephone number:<p class="required-warning">*Required</p></label><br>
+                <input type="tel" id="telephone" name="telephone" required><br><br>
 
                 <label for="line_id">LINE ID (If you would like to be contacted via LINE):</label><br>
                 <input type="text" id="line_id" name="line_id"><br><br>
 
                 <label for="industry">Industry:</label><br>
-                <input type="text" id="industry" name="industry" required><br><br>
+                <input type="text" id="industry" name="industry"><br><br>
 
                 <label for="store_url">If you have an existing store, please enter its URL:</label><br>
                 <input type="url" id="store_url" name="store_url"><br><br>
 
-                <label for="inquiry">Content of inquiry:</label><br>
+                <label for="inquiry">Content of inquiry:<p class="required-warning">*Required</p></label><br>
                 <textarea id="inquiry" name="inquiry" rows="4" required></textarea><br><br>
 
-                <input id="submit" type="submit" value="Submit">
+                <input id="submit" type="submit" value="Submit" onclick="validateForm()">
             </form>
 
             <form class="contact recruitment">
@@ -131,17 +129,17 @@
                     <button id="contact-select-3" onclick="change_contact(event, 3)" type="button"><i class="fa-regular fa-circle-right"></i>Recruitment</button>
                 </div>
 
-                <label for="name">Name:</label><br>
+                <label for="name">Name:<p class="required-warning">*Required</p></label><br>
                 <input type="text" id="name" name="name" required><br><br>
 
-                <label for="surname">Surname:</label><br>
+                <label for="surname">Surname:<p class="required-warning">*Required</p></label><br>
                 <input type="text" id="surname" name="surname" required><br><br>
 
-                <label for="age">Age:</label><br>
+                <label for="age">Age:<p class="required-warning">*Required</p></label><br>
                 <!-- change to number -->
                 <input type="text" id="age" name="age" required><br><br> 
 
-                <label for="Gender">Gender:</label><br>
+                <label for="Gender">Gender:<p class="required-warning">*Required</p></label><br>
                 <input type="radio" id="male" name="gender" value="male" required>
                 <label for="male">Male</label><br>
                 <input type="radio" id="female" name="gender" value="female">
@@ -149,32 +147,32 @@
                 <input type="radio" id="other" name="gender" value="other">
                 <label for="other">Other</label><br><br>
 
-                <label for="adress">Address:</label><br>
-                <input type="text" id="address" name="address"><br><br>
+                <label for="adress">Address:<p class="required-warning">*Required</p></label><br>
+                <input type="text" id="address" name="address" required><br><br>
 
-                <label for="email">Email address:</label><br>
+                <label for="email">Email address:<p class="required-warning">*Required</p></label><br>
                 <input type="email" id="email" name="email" required><br><br>
 
-                <label for="confirm_email">Confirm email:</label><br>
+                <label for="confirm_email">Confirm email:<p class="required-warning">*Required</p></label><br>
                 <input type="email" id="confirm_email" name="confirm_email" required><br><br>
 
-                <label for="work_history">Work History:</label><br>
-                <input type="text" id="work_history" name="work_history"><br><br>
+                <label for="work_history">Work History:<p class="required-warning">*Required</p></label><br>
+                <input type="text" id="work_history" name="work_history" required><br><br>
 
-                <label for="job_type">Job Type:</label><br>
-                <input type="text" id="job_type" name="job_type"><br><br>
+                <label for="job_type">Job Type:<p class="required-warning">*Required</p></label><br>
+                <input type="text" id="job_type" name="job_type" required><br><br>
 
-                <label for="cover_letter">Cover Letter:</label><br>
+                <label for="cover_letter">Cover Letter:<p class="required-warning">*Required</p></label><br>
                 <div class="custom-file-input">
-                    <input type="file" id="cover_letter" name="cover_letter">
+                    <input type="file" id="cover_letter" name="cover_letter" required>
                 </div>
 
-                <label for="resume">Resume:</label><br>
+                <label for="resume">Resume:<p class="required-warning">*Required</p></label><br>
                 <div class="custom-file-input">
-                    <input type="file" id="resume" name="resume">
+                    <input type="file" id="resume" name="resume" required>
                 </div><br><br>
 
-                <input id="submit" type="submit" value="Submit">
+                <input type="submit" value="Submit" onclick="validateForm(event)">
             </form>
         </div>
         
@@ -267,6 +265,27 @@
             <!-- Grid container -->
         </footer>
         <!-- Footer -->
+
+        <script>
+            function validateForm() {
+                var form = event.target.form;
+                var fields = form.querySelectorAll('input[required], textarea[required], select[required]');
+
+                var isValid = true;
+
+                fields.forEach(function(field) {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.parentNode.querySelector('.required-warning').style.display = 'block';
+                    } else {
+                        field.parentNode.querySelector('.required-warning').style.display = 'none';
+                    }
+                });
+
+                return isValid;
+            }
+        </script>
+        
         
         <script src="../scripts/script.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

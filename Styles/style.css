@@ -3,22 +3,13 @@ html{
     overflow-x: hidden;
 }
 
-/* *{
-    border: 1px solid red;
-} */
-
 body{
     max-width: 100%;
     background-image: url(../Assets/background3.png);
     background-size: repeat;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
-
-/*
-Lightblue mobile view
-Lighpink tablet view
-Lightseagreen desktop view
-*/
 
 /*
 Brand colors
@@ -31,11 +22,6 @@ Brand colors
 
 /* Phone display */
 @media only screen and (max-width: 600px) {
-
-    /* Body */
-    body{
-        background-color: lightblue;
-    }
 
     /* Navbar */
     .navbar {
@@ -164,11 +150,31 @@ Brand colors
     .welcome-message{
         display: inline-block;
         width: 90%;
+        max-width: 90%;
         margin-top: 20%;
         margin-left: 10%;
         margin-bottom: 10vh;
         text-align: left;
-        font-size: 15vw;
+        font-size: 11vw;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: animate 2s linear forwards;
+        color: #222;
+        overflow-y: hidden;
+        animation-delay: 3s;
+    }
+
+    .welcome-message pre{
+        overflow: hidden;
+    }
+      
+    @keyframes animate {
+        0% {
+            width: 0px;
+        }
+        100% {
+            width: 100%;
+        }
     }
 
     /* Carousel */
@@ -196,8 +202,8 @@ Brand colors
         position: relative;
         padding-bottom: 200px;
         box-sizing: border-box;
-        width: 100%; /* Ensure gallery images fit within screen width */
-        max-width: 100%; /* Ensure gallery images don't exceed screen width */
+        width: 100%;
+        max-width: 100%;
     }
 
     .gallery-img img {
@@ -207,22 +213,26 @@ Brand colors
 
     .gallery-name {
         position: absolute;
-        color: rgb(0, 0, 0);
+        color: darkgray;
         font-size: 7vw;
         text-decoration: underline;
         top: 0;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: cornsilk;
     }
 
     .info-display {
+        position: absolute;
         display: inline-block;
         width: 60%;
-        margin: 0;
-        height: auto;
+        height: 110px;
+        top: 50%;
+        right: 0;
         border: #000000 solid;
         background-color: #000000;
         color: white;
         border-radius: 2px;
-        max-width: 100%; /* Ensure info display fits within screen width */
+        max-width: 60%;
     }
     
     .info-display a {
@@ -230,12 +240,18 @@ Brand colors
         text-decoration: none;
     }
 
-    .gallery-social-media {
+    .gallery-social-media-div {
         width: 40%;
+        max-width: 40%;
+        margin: 0;
+        position: relative;
+        right: 0;
+    }
+
+    .gallery-social-media {
         position: relative;
         font-size: 5vw;
         color: black;
-        padding: 1%;
     }
     
     /* Accordion */
@@ -249,14 +265,14 @@ Brand colors
         width: 100%;
         display: flex;
         border-radius: 10px;
-        overflow: hidden;
+        overflow: scroll;
     }
     
     .slider {
         list-style-type: none;
         height: 400px;
         width: 5%;
-        overflow: hidden;
+        overflow: scroll;
         transition: all 500ms linear;
     }
 
@@ -281,6 +297,11 @@ Brand colors
         padding: 40px;
         color:#fff;
         
+    }
+
+    .slide-content p{
+        width: 100%;
+        overflow: scroll;
     }
 
     .active {
@@ -544,11 +565,6 @@ Brand colors
 /* Tablet view */
 @media only screen and (min-width: 601px) {
 
-    /* Body */
-    body{
-        background-color: lightpink;
-    }
-
     /* Navbar */
     .navbar{
         position: fixed;
@@ -605,7 +621,7 @@ Brand colors
         position: fixed;
         right: 20px;
         top: 25px;
-        z-index: 9999; /* Ensure the button is above other elements */
+        z-index: 9999;
         border: none;
         background-color: transparent;
         padding: 0;
@@ -634,7 +650,7 @@ Brand colors
             top: -100%;
         }
         50%{
-            opacity: 0; /* Corrected opacity value */
+            opacity: 0;
             top: 50%;
         }
         100% {
@@ -652,15 +668,35 @@ Brand colors
 
     /********************************************************************/
 
-
+    /* Welcome Message */
     .welcome-message{
         display: inline-block;
         width: 80%;
+        max-width: 80%;
         margin-top: 10%;
-        margin-left: 20%;
+        margin-left: 12.5%;
+        margin-right: 12.5;
         margin-bottom: 15%;
-        text-align: left;
         font-size: 9vw;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: animate 2s linear forwards;
+        color: #222;
+        overflow-y: hidden;
+        animation-delay: 2.5s;
+    }
+
+    .welcome-message pre{
+        overflow: hidden;
+    }
+      
+    @keyframes animate {
+        0% {
+            width: 0px;
+        }
+        100% {
+            width: 100%;
+        }
     }
 
     /* Carousel */
@@ -696,17 +732,21 @@ Brand colors
 
     .gallery-name{
         position: absolute;
-        color: rgb(0, 0, 0);
+        color: darkgray;
         font-size: 7vw;
         text-decoration: underline;
         top: -5px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
     }
 
     .info-display {
+        position: absolute;
         display: inline-block;
         width: 60%;
-        margin: 0;
-        height: auto;
+        height: 110px;
+        top: 70%;
+        right: 0;
         border: #000000 solid;
         background-color: #000000;
         color: white;
@@ -1018,11 +1058,6 @@ Brand colors
 /* Desktop and above */
 @media only screen and (min-width: 992px) {
 
-    /* Body */
-    body {
-        background-color: lightseagreen;
-    }
-
     /* Navbar */
     .navbar {
         position: fixed;
@@ -1092,6 +1127,25 @@ Brand colors
         margin-bottom: 15%;
         text-align: left;
         font-size: 9vw;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: animate 2s linear forwards;
+        color: #222;
+        overflow-y: hidden;
+        animation-delay: 3s;
+    }
+
+    .welcome-message pre{
+        overflow: hidden;
+    }
+      
+    @keyframes animate {
+        0% {
+            width: 0px;
+        }
+        100% {
+            width: 100%;
+        }
     }
 
     /* Carousel */
@@ -1115,7 +1169,7 @@ Brand colors
         flex-direction: column;
         align-items: center;
         max-width: 80%;
-        margin-left: 25%; /* Adjusted margin */
+        margin-left: 25%;
         margin-top: 10vh;
     }
 
@@ -1175,6 +1229,8 @@ Brand colors
         top: -70px;
         text-decoration: none;
         color: darkgray;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
     }
 
     .gallery-name h3{
@@ -1185,11 +1241,10 @@ Brand colors
     }
 
     .gallery-social-media {
-        display: inline-block;
         font-size: 2vw;
         color: black;
         padding: 0;
-        width: 40%;
+        width: 10%;
     }
 
     .gallery-social-media a{
@@ -1206,7 +1261,7 @@ Brand colors
     .accordion {
         max-width: 80%;
         padding: 0 20px;
-        margin-left: 20%; /* Adjusted margin */
+        margin-left: 20%;
     }
 
     .slides {
@@ -1296,7 +1351,7 @@ Brand colors
         position: fixed;
         bottom: 0;
         left: 0;
-        margin-left: 20%; /* Adjusted margin */
+        margin-left: 20%;
         padding: 0;
         background-color: white;
         width: 80%;
@@ -1486,44 +1541,52 @@ Brand colors
         left: 0;
         opacity: 0;
     }
+
+    .required-warning{
+        display: none;
+        color: red;
+        float: right;
+        padding-left: 20px;
+    }
 }
 
-/*splach screen*/
+/* splash screen */
 #splashscreen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #000000;
+    background-image: url(../Assets/background3-reverse.png);
+    background-repeat: repeat;
     color: #ffffff;
     text-align: center;
     line-height: 90vh;
     z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 
-#splashscreen.display-none {
+.fade-in {
     position: fixed;
+    top: 50%;
+    left: 50%;
     opacity: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #000000;
-    text-align: center;
-    line-height: 90vh;
-    z-index: -10;
-    transition: all 0s; /*change 0 to 0.5 later*/
+    animation: fadeIn 1s ease-in forwards;
 }
 
+#splascreen p{
+    font-size: 500%;
+}
 
-@keyframes fadeIn{
-    to{
+@keyframes fadeIn {
+    to {
         opacity: 1;
     }
 }
 
-.fade-in{
+/* hide splash screen */
+#splashscreen.hidden {
     opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
+    z-index: -10;
 }
