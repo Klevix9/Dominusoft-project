@@ -139,7 +139,7 @@ Brand colors
     
     .nav-link-animation{
         opacity: 0;
-        animation: nav-link-animation 1s ease-in forwards;
+        animation: nav-link-animation 0.1s ease-in forwards;
         animation-delay: 0.5s;
         animation-direction: normal;
     }
@@ -179,9 +179,9 @@ Brand colors
 
     /* Carousel */
     #carousel {
-        margin: 0 2% 50% 13%;
-        width: 100%;
-        max-width: 100%;
+        margin: 0 2% 50% 0%;
+        width: 130%;
+        max-width: 130%;
     }
 
     .carousel-item img {
@@ -225,7 +225,7 @@ Brand colors
         position: absolute;
         display: inline-block;
         width: 60%;
-        height: 110px;
+        height: 130px;
         top: 50%;
         right: 0;
         border: #000000 solid;
@@ -559,6 +559,24 @@ Brand colors
         left: 0;
         opacity: 0;
     }
+
+    /* Required Warning properties */
+    .required-warning{
+        display: none;
+        color: red;
+        float: right;
+        padding-left: 20px;
+    }
+
+    /* Splash Screen text font size */
+    .fade-in {
+        position: fixed;
+        top: 50%;
+        left: 20%;
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards;
+        font-size: 200%;
+    }
 }
 
 
@@ -661,7 +679,7 @@ Brand colors
 
     .nav-link-animation {
         opacity: 0;
-        animation: nav-link-animation 1s ease-in forwards;
+        animation: nav-link-animation 0.1s ease-in forwards;
         animation-delay: 0.5s;
         animation-direction: normal;
     }
@@ -1050,6 +1068,24 @@ Brand colors
         top: 0;
         left: 0;
         opacity: 0;
+    }
+
+    /* Required Warning properties */
+    .required-warning{
+        display: none;
+        color: red;
+        float: right;
+        padding-left: 20px;
+    }
+
+    /* Splash Screen text font size */
+    .fade-in {
+        position: fixed;
+        top: 50%;
+        left: 40%;
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards;
+        font-size: 300%;
     }
 }
 
@@ -1463,6 +1499,7 @@ Brand colors
         border-color: darkgray;
         border-width: 1px;
         margin-top: 2%;
+        color: lightgray;
     }
 
     .contact input:hover{
@@ -1470,8 +1507,8 @@ Brand colors
         color: #222;
     }
 
-    .contact input:focus, input:focus {
-        color: darkgray;
+    .contact input:focus {
+        color: white;
     }
 
     .contact #submit{
@@ -1542,11 +1579,22 @@ Brand colors
         opacity: 0;
     }
 
+    /* Required Warning properties */
     .required-warning{
         display: none;
         color: red;
         float: right;
         padding-left: 20px;
+    }
+
+    /* Splash Screen text font size */
+    .fade-in {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards;
+        font-size: 400%;
     }
 }
 
@@ -1565,14 +1613,6 @@ Brand colors
     z-index: 9999;
     opacity: 1;
     transition: opacity 1s ease-in-out;
-}
-
-.fade-in {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
 }
 
 #splascreen p{

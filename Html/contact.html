@@ -75,7 +75,7 @@
                 <label for="inquiry">Content of inquiry:<p class="required-warning">*Required</p></label><br>
                 <textarea id="inquiry" name="inquiry" rows="4" required></textarea><br><br>
 
-                <input id="submit" type="submit" value="Submit" onclick="return validateForm()">
+                <input id="submit" type="submit" value="Submit" onclick="validateForm(event)">
 
             </form>
 
@@ -116,7 +116,8 @@
                 <label for="inquiry">Content of inquiry:<p class="required-warning">*Required</p></label><br>
                 <textarea id="inquiry" name="inquiry" rows="4" required></textarea><br><br>
 
-                <input id="submit" type="submit" value="Submit" onclick="validateForm()">
+                <input id="submit" type="submit" value="Submit" onclick="validateForm(event)">
+
             </form>
 
             <form class="contact recruitment">
@@ -136,8 +137,8 @@
                 <input type="text" id="surname" name="surname" required><br><br>
 
                 <label for="age">Age:<p class="required-warning">*Required</p></label><br>
-                <!-- change to number -->
-                <input type="text" id="age" name="age" required><br><br> 
+                <input type="number" id="age" name="age" required><br><br>
+
 
                 <label for="Gender">Gender:<p class="required-warning">*Required</p></label><br>
                 <input type="radio" id="male" name="gender" value="male" required>
@@ -172,7 +173,7 @@
                     <input type="file" id="resume" name="resume" required>
                 </div><br><br>
 
-                <input type="submit" value="Submit" onclick="validateForm(event)">
+                <input id="submit" type="submit" value="Submit" onclick="validateForm(event)">
             </form>
         </div>
         
@@ -265,27 +266,6 @@
             <!-- Grid container -->
         </footer>
         <!-- Footer -->
-
-        <script>
-            function validateForm() {
-                var form = event.target.form;
-                var fields = form.querySelectorAll('input[required], textarea[required], select[required]');
-
-                var isValid = true;
-
-                fields.forEach(function(field) {
-                    if (!field.value.trim()) {
-                        isValid = false;
-                        field.parentNode.querySelector('.required-warning').style.display = 'block';
-                    } else {
-                        field.parentNode.querySelector('.required-warning').style.display = 'none';
-                    }
-                });
-
-                return isValid;
-            }
-        </script>
-        
         
         <script src="../scripts/script.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

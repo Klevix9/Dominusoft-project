@@ -7,7 +7,7 @@ const splash = document.querySelector('#splashscreen');
 document.addEventListener('DOMContentLoaded', (e) => {
     setTimeout(() => {
         splash.classList.add('hidden');
-    }, 0); // 3000 milliseconds = 3 seconds
+    }, 3000); // 3000 milliseconds = 3 seconds
 });
 
 // Function to disable scrolling
@@ -37,7 +37,7 @@ function enableScroll() {
 
 // Example usage: disable scrolling for 3 seconds
 disableScroll();
-setTimeout(enableScroll, 0);
+setTimeout(enableScroll, 3000);
 
 
 
@@ -70,28 +70,38 @@ function toggle_nav() {
     }
 }
 
-//Displace nav bar when overlapping with footer
 document.addEventListener("DOMContentLoaded", function() {
     const navbar = document.querySelector(".navbar");
     const logo = document.querySelector(".main-logo");
     const footer = document.querySelector("footer");
 
-    function checkOverlap() {
-        const navbarBottom = navbar.getBoundingClientRect().bottom;
-        const footerTop = footer.getBoundingClientRect().top;
+    const originalNavbarTop = navbar.style.top;
+    const originalLogoBottom = logo.style.bottom;
 
-        if (navbarBottom > footerTop) {
-            const overlap = navbarBottom - footerTop;
-            navbar.style.top = `-${overlap}px`;
-            logo.style.bottom = `${overlap}px`;
+    function checkOverlap() {
+        if (window.matchMedia("(min-width: 992px)").matches) {
+            const navbarBottom = navbar.getBoundingClientRect().bottom;
+            const footerTop = footer.getBoundingClientRect().top;
+
+            if (navbarBottom > footerTop) {
+                const overlap = navbarBottom - footerTop;
+                navbar.style.top = `-${overlap}px`;
+                logo.style.bottom = `${overlap}px`;
+            } else {
+                navbar.style.top = originalNavbarTop;
+                logo.style.bottom = originalLogoBottom;
+            }
         } else {
-            navbar.style.top = "0";
-            logo.style.bottom = "0";
+            navbar.style.top = originalNavbarTop;
+            logo.style.bottom = originalLogoBottom;
         }
     }
 
     window.addEventListener("scroll", checkOverlap);
+
+    window.addEventListener("resize", checkOverlap);
 });
+
 
 
 //Gallery
@@ -243,4 +253,32 @@ function change_contact(event, type) {
 }
 
 
+// // Required warning 
+function validateForm(event) {
+    var warning = document.querySelectorAll("required-warning");
+    var isFormValid = true;
+    var input = document.querySelectorAll("[required]");
+    var x = 0;
+    var y = 0;
 
+    while (x < (warning.length)){
+        if(!input[x].value.trim()){
+            warning.style.display = "block";
+            y = y+1;
+            console.log(y);
+        }
+        else{
+            warning.style.display = "none";
+            y = y-1;
+            console.log(y);
+        }
+        x = x + 1;
+    }
+
+    if(y != 0){
+        return isFormValid == false;
+    }
+    else{
+        return isFormValid == true;
+    }
+}
