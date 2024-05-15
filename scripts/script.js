@@ -134,54 +134,61 @@ var accordion_index = 0;
 function slider_change(event, x) {
     event.preventDefault();
 
-    $(".slider").removeClass("active");
+    document.querySelectorAll(".slider").forEach(function(slider) {
+        slider.classList.remove("active");
+    });
+    
     accordion_index = x;
-    var slide = $(".slider").eq(accordion_index);
-    slide.addClass("active");
+    var slide = document.querySelectorAll(".slider")[accordion_index];
+    slide.classList.add("active");
 
     return accordion_index;
 }
 
 function slider_change_next(event) {
-    $(".slider").removeClass("active");
-    accordion_index = (accordion_index + 1) % $(".slider").length;
-    var slide = $(".slider").eq(accordion_index);
-    slide.addClass("active");
+    document.querySelectorAll(".slider").forEach(function(slider) {
+        slider.classList.remove("active");
+    });
+
+    accordion_index = (accordion_index + 1) % document.querySelectorAll(".slider").length;
+    var slide = document.querySelectorAll(".slider")[accordion_index];
+    slide.classList.add("active");
 
     return accordion_index;
 }
 
 function slider_change_prev(event) {
-    $(".slider").removeClass("active");
-    accordion_index = (accordion_index - 1 + $(".slider").length) % $(".slider").length;
-    var slide = $(".slider").eq(accordion_index);
-    slide.addClass("active");
+    document.querySelectorAll(".slider").forEach(function(slider) {
+        slider.classList.remove("active");
+    });
+
+    accordion_index = (accordion_index - 1 + document.querySelectorAll(".slider").length) % document.querySelectorAll(".slider").length;
+    var slide = document.querySelectorAll(".slider")[accordion_index];
+    slide.classList.add("active");
 
     return accordion_index;
 }
 
-
-
-
 // checkWidth
-checkWidth = function(){
-  var windowsize = $(window).width();
-  if (windowsize > 480) {
-      var slideWidth = $('.active').width();
-      $('.slide-content').css({
-          "width" : slideWidth+"px"
-      });
-  }
-  
+function checkWidth() {
+    var windowsize = window.innerWidth;
+    if (windowsize > 480) {
+        var activeSlide = document.querySelector('.active');
+        if (activeSlide) {
+            var slideWidth = activeSlide.offsetWidth;
+            document.querySelectorAll('.slide-content').forEach(function(content) {
+                content.style.width = slideWidth + "px";
+            });
+        }
+    }
 }
 
-$(window).resize(function() {
-  checkWidth();
+window.addEventListener('resize', function() {
+    checkWidth();
 
-  clearTimeout(window.resizedFinished);
-  window.resizedFinished = setTimeout( checkWidth , 500);
+    clearTimeout(window.resizedFinished);
+    window.resizedFinished = setTimeout(checkWidth, 500);
 });
-
 
 
 // Contact Page
