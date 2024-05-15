@@ -7,17 +7,14 @@ const splash = document.querySelector('#splashscreen');
 document.addEventListener('DOMContentLoaded', (e) => {
     setTimeout(() => {
         splash.classList.add('hidden');
-    }, 3000); // 3000 milliseconds = 3 seconds
+    }, 3000);
 });
 
-// Function to disable scrolling
 function disableScroll() {
-    // Get the current scroll position
     var scrollPosition = [
         self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
         self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
     ];
-    // Save the current scroll position
     var html = document.getElementsByTagName('html')[0];
     html.style.overflow = 'hidden';
     html.style.position = 'fixed';
@@ -35,7 +32,7 @@ function enableScroll() {
     window.scrollTo(scrollPosition[0], scrollPosition[1]);
 }
 
-// Example usage: disable scrolling for 3 seconds
+// Call scrolling disable function
 disableScroll();
 setTimeout(enableScroll, 3000);
 
@@ -179,10 +176,8 @@ checkWidth = function(){
 }
 
 $(window).resize(function() {
-  // onresize
   checkWidth();
 
-  // finish resize
   clearTimeout(window.resizedFinished);
   window.resizedFinished = setTimeout( checkWidth , 500);
 });
@@ -195,21 +190,17 @@ $(window).resize(function() {
 function change_contact(event, type) {
     event.preventDefault();
 
-    // Select all forms
     const forms = document.querySelectorAll('.contact');
 
-    // Hide all forms
     forms.forEach(form => {
         form.style.display = 'none';
     });
 
-    // Reset button rotation and hide all forms
     const buttons = document.querySelectorAll('.contact-type button');
     buttons.forEach(button => {
         button.style.transform = 'rotate(0deg)';
     });
 
-    // Display the selected form and rotate the corresponding button icon
     if (type === 1) {
         document.querySelector('.job-request').style.display = 'block';
         document.querySelector('.cooperation').style.display = 'none';
@@ -253,32 +244,31 @@ function change_contact(event, type) {
 }
 
 
-// // Required warning 
+// Required warning 
 function validateForm(event) {
-    var warning = document.querySelectorAll("required-warning");
-    var isFormValid = true;
-    var input = document.querySelectorAll("[required]");
-    var x = 0;
-    var y = 0;
+    event.preventDefault();
 
-    while (x < (warning.length)){
-        if(!input[x].value.trim()){
-            warning.style.display = "block";
-            y = y+1;
-            console.log(y);
-        }
-        else{
-            warning.style.display = "none";
-            y = y-1;
-            console.log(y);
-        }
-        x = x + 1;
-    }
+    const form = event.target.closest('form');
+    const inputs = form.querySelectorAll('input, textarea');
+    let isValid = true;
 
-    if(y != 0){
-        return isFormValid == false;
-    }
-    else{
-        return isFormValid == true;
+    inputs.forEach(input => {
+        if (input.hasAttribute('required') && !input.value.trim()) {
+            isValid = false;
+            input.style.border = '1px solid red';
+            // const warning = document.querySelector(".require-warning");
+            // warning.style.display = "block";
+        } else {
+            input.style.border = '';
+            // const warning = document.querySelector(".require-warning");
+            // warning.style.display = "block";
+        }
+    });
+
+    if (!isValid) {
+        return isValid;
+    } else {
+        form.submit();
     }
 }
+
