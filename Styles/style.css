@@ -3,13 +3,14 @@ html{
     overflow-x: hidden;
 }
 
-body{
+body {
     max-width: 100%;
-    background-image: url(../Assets/background3.png);
-    background-size: repeat;
+    background-image: url(../Assets/background3.png), url(../Assets/background4.png);
+    background-size: auto;
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
 
 /*
 Brand colors

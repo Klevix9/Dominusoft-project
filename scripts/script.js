@@ -253,32 +253,31 @@ function change_contact(event, type) {
 }
 
 
-// // Required warning 
+// Required warning 
 function validateForm(event) {
-    var warning = document.querySelectorAll("required-warning");
-    var isFormValid = true;
-    var input = document.querySelectorAll("[required]");
-    var x = 0;
-    var y = 0;
+    event.preventDefault();
 
-    while (x < (warning.length)){
-        if(!input[x].value.trim()){
-            warning.style.display = "block";
-            y = y+1;
-            console.log(y);
-        }
-        else{
-            warning.style.display = "none";
-            y = y-1;
-            console.log(y);
-        }
-        x = x + 1;
-    }
+    const form = event.target.closest('form');
+    const inputs = form.querySelectorAll('input, textarea');
+    let isValid = true;
 
-    if(y != 0){
-        return isFormValid == false;
-    }
-    else{
-        return isFormValid == true;
+    inputs.forEach(input => {
+        if (input.hasAttribute('required') && !input.value.trim()) {
+            isValid = false;
+            input.style.border = '1px solid red';
+            // const warning = document.querySelector(".require-warning");
+            // warning.style.display = "block";
+        } else {
+            input.style.border = '';
+            // const warning = document.querySelector(".require-warning");
+            // warning.style.display = "block";
+        }
+    });
+
+    if (!isValid) {
+        return isValid;
+    } else {
+        form.submit();
     }
 }
+
